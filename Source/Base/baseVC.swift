@@ -21,6 +21,11 @@ class baseVC<T: Reactor>: UIViewController{
         configureVC()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureWillAppear()
+    }
+    
     init(reactor: T){
         super.init(nibName: nil, bundle: nil)
         self.reactor = reactor
@@ -37,6 +42,7 @@ class baseVC<T: Reactor>: UIViewController{
     func addView(){}
     func setLayout(){}
     func configureVC(){}
+    func configureWillAppear(){}
     
     func bindView(reactor: T){}
     func bindAction(reactor: T){}

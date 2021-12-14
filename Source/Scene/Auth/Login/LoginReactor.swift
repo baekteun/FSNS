@@ -19,10 +19,16 @@ final class LoginReactor: Reactor, Stepper{
     
     // MARK: - Reactor
     enum Action{
+        case updateID(String?)
+        case updatePassword(String?)
     }
     enum Mutation{
+        case setID(String?)
+        case setPassword(String?)
     }
     struct State{
+        var id: String?
+        var password: String?
     }
     
     var initialState: State = State()
@@ -32,7 +38,12 @@ final class LoginReactor: Reactor, Stepper{
 // MARK: - Mutate
 extension LoginReactor{
     func mutate(action: Action) -> Observable<Mutation> {
-        
+        switch action{
+        case let .updateID(id):
+            return .just(.setID(id))
+        case let .updatePassword(pwd):
+            return .just(.setPassword(pwd))
+        }
     }
 }
 
@@ -41,7 +52,10 @@ extension LoginReactor{
     func reduce(state: State, mutation: Mutation) -> State {
         var newState = state
         switch mutation {
-            
+        case let .setID(id):
+            newState.id = id
+        case let .setPassword(pwd):
+            newState.password = pwd
         }
         return newState
     }
