@@ -1,5 +1,5 @@
 //
-//  LoginFlow.swift
+//  MainFlow.swift
 //  Fashion
 //
 //  Created by 최형우 on 2021/12/14.
@@ -9,26 +9,26 @@
 import RxFlow
 import RxRelay
 
-struct LoginStepper: Stepper{
+struct MainStepper: Stepper{
     let steps: PublishRelay<Step> = .init()
     
     var initialStep: Step{
-        return FashionStep.loginIsRequired
+        return FashionStep.mainIsRequired
     }
 }
 
-final class LoginFlow: Flow{
+final class MainFlow: Flow{
     // MARK: - Properties
     var root: Presentable{
         return self.rootVC
     }
     
-    let stepper: LoginStepper
+    let stepper: MainStepper
     private let rootVC = UINavigationController()
     
     // MARK: - Init
     init(
-        with stepper: LoginStepper
+        with stepper: MainStepper
     ){
         self.stepper = stepper
     }
@@ -40,12 +40,9 @@ final class LoginFlow: Flow{
     // MARK: - Navigate
     func navigate(to step: Step) -> FlowContributors {
         guard let step = step.asFashionStep else { return .none }
-        
         switch step{
-        case .loginIsRequired:
-            return coordinateToLogin()
         case .mainIsRequired:
-            return .end(forwardToParentFlowWithStep: FashionStep.mainIsRequired)
+            return coordinateToMain()
         default:
             return .none
         }
@@ -53,10 +50,10 @@ final class LoginFlow: Flow{
 }
 
 // MARK: - Method
-private extension LoginFlow{
-    func coordinateToLogin() -> FlowContributors{
-        let reactor = LoginReactor()
-        let vc = LoginVC(reactor: reactor)
+private extension MainFlow{
+    func coordinateToMain() -> FlowContributors{
+        let reactor = MainReactor()
+        let vc = MainVC(reactor: reactor)
         self.rootVC.pushViewController(vc, animated: true)
         return .one(flowContributor: .contribute(withNextPresentable: vc, withNextStepper: reactor))
     }

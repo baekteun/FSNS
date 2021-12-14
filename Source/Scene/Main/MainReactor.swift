@@ -1,5 +1,5 @@
 //
-//  LoginReactor.swift
+//  MainReactor.swift
 //  Fashion
 //
 //  Created by 최형우 on 2021/12/14.
@@ -11,7 +11,7 @@ import ReactorKit
 import RxFlow
 import RxCocoa
 
-final class LoginReactor: Reactor, Stepper{
+final class MainReactor: Reactor, Stepper{
     // MARK: - Properties
     var steps: PublishRelay<Step> = .init()
     
@@ -19,17 +19,12 @@ final class LoginReactor: Reactor, Stepper{
     
     // MARK: - Reactor
     enum Action{
-        case updateID(String?)
-        case updatePassword(String?)
-        case loginButtonDidTap
+        case sideButtonDidTap
+        case profileDidTap
     }
     enum Mutation{
-        case setID(String?)
-        case setPassword(String?)
     }
     struct State{
-        var id: String?
-        var password: String?
     }
     
     var initialState: State = State()
@@ -37,29 +32,25 @@ final class LoginReactor: Reactor, Stepper{
 }
 
 // MARK: - Mutate
-extension LoginReactor{
+extension MainReactor{
     func mutate(action: Action) -> Observable<Mutation> {
         switch action{
-        case let .updateID(id):
-            return .just(.setID(id))
-        case let .updatePassword(pwd):
-            return .just(.setPassword(pwd))
-        case .loginButtonDidTap:
-            steps.accept(FashionStep.mainIsRequired)
+        case .sideButtonDidTap:
+            // present sidebar
+            return .empty()
+        case .profileDidTap:
+            // present profileVC
             return .empty()
         }
     }
 }
 
 // MARK: - Reduce
-extension LoginReactor{
+extension MainReactor{
     func reduce(state: State, mutation: Mutation) -> State {
         var newState = state
         switch mutation {
-        case let .setID(id):
-            newState.id = id
-        case let .setPassword(pwd):
-            newState.password = pwd
+            
         }
         return newState
     }
@@ -67,6 +58,6 @@ extension LoginReactor{
 
 
 // MARK: - Method
-private extension LoginReactor{
+private extension MainReactor{
     
 }

@@ -9,6 +9,8 @@
 import UIKit
 import Then
 import SnapKit
+import RxCocoa
+import RxSwift
 
 final class LoginVC: baseVC<LoginReactor>{
     // MARK: - Properties
@@ -101,11 +103,14 @@ final class LoginVC: baseVC<LoginReactor>{
         }
         
     }
-    override func configureVC() {
-        
-    }
-    override func configureWillAppear() {
-        
+    
+    // MARK: - Reactor
+    
+    override func bindView(reactor: LoginReactor) {
+        loginButton.rx.tap
+            .map { _ in Reactor.Action.loginButtonDidTap }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
     }
 }
 

@@ -49,6 +49,8 @@ final class AppFlow: Flow{
         switch step{
         case .loginIsRequired:
             return coordinateToLogin()
+        case .mainIsRequired:
+            return coordinateToMain()
         default:
             return .none
         }
@@ -64,6 +66,14 @@ private extension AppFlow{
             self.rootWindow.rootViewController = root
         }
         let nextStep = OneStepper(withSingleStep: FashionStep.loginIsRequired)
+        return .one(flowContributor: .contribute(withNextPresentable: flow, withNextStepper: nextStep))
+    }
+    func coordinateToMain() -> FlowContributors{
+        let flow = MainFlow(with: .init())
+        Flows.use(flow, when: .created) { [unowned self] root in
+            self.rootWindow.rootViewController = root
+        }
+        let nextStep = OneStepper(withSingleStep: FashionStep.mainIsRequired)
         return .one(flowContributor: .contribute(withNextPresentable: flow, withNextStepper: nextStep))
     }
 }
