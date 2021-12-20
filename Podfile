@@ -1,4 +1,4 @@
-# Uncomment the next line to define a global platform for your project
+  # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
 target 'Fashion' do
@@ -19,6 +19,7 @@ target 'Fashion' do
   pod 'Then', '~> 2.7.0'
   pod 'SnapKit', '~> 5.0.1'
   pod 'Kingfisher', '~> 7.1.2'
+
 
   # Network
   pod 'Moya/RxSwift', '~> 15.0.0'

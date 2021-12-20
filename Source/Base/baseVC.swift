@@ -42,7 +42,6 @@ class baseVC<T: Reactor>: UIViewController{
     func addView(){}
     func setLayout(){}
     func configureVC(){
-        self.navigationController?.configureNavigationController()
         self.navigationItem.configureNavigationItem()
     }
     func configureWillAppear(){}

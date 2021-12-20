@@ -15,7 +15,7 @@ extension UIButton{
         addSubview(view)
         view.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview()
-            $0.top.equalTo(self.snp.bottom)
+            $0.bottom.equalToSuperview()
             $0.height.equalTo(1)
         }
     }

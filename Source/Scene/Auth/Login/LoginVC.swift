@@ -16,31 +16,19 @@ final class LoginVC: baseVC<LoginReactor>{
     // MARK: - Properties
     private let logoLabel = UILabel().then {
         $0.text = "Welcome\nto Fashion SNS"
-        $0.font = UIFont(font: FashionFontFamily.Supermercado.regular, size: 34)
+        $0.font = UIFont(font: FashionFontFamily.Supermercado.regular, size: 36)
         $0.textColor = .white
         $0.numberOfLines = 0
         $0.textAlignment = .center
     }
     
-    private let idTextField = UITextField().then {
-        $0.placeholder = "ID"
-        $0.textAlignment = .center
-        $0.font = UIFont(font: FashionFontFamily.Supermercado.regular, size: 18)
-        $0.backgroundColor = .white
-        $0.layer.cornerRadius = 20
-    }
+    private let idTextField = LoginTextField(icon: UIImage(systemName: "person.fill")?.withTintColor(.white, renderingMode: .alwaysOriginal) ?? .init(), placeholder: "ID")
     
-    private let passwordTextField = UITextField().then {
-        $0.placeholder = "PassWord"
-        $0.textAlignment = .center
-        $0.font = UIFont(font: FashionFontFamily.Supermercado.regular, size: 18)
-        $0.backgroundColor = .white
-        $0.layer.cornerRadius = 20
-    }
+    private let passwordTextField = LoginTextField(icon: UIImage(systemName: "lock.fill")?.withTintColor(.white, renderingMode: .alwaysOriginal) ?? .init(), placeholder: "Password")
     
     private lazy var stack = UIStackView(arrangedSubviews: [idTextField, passwordTextField]).then {
         $0.axis = .vertical
-        $0.spacing = bound.height*0.0281
+        $0.spacing = bound.height*0.0112
     }
     
     private let findIdOrPasswordButton = UIButton().then {
@@ -61,9 +49,8 @@ final class LoginVC: baseVC<LoginReactor>{
         $0.setTitle("Login", for: .normal)
         $0.setTitleColor(.black, for: .normal)
         $0.backgroundColor = .white
-        $0.layer.cornerRadius = 20
-        $0.titleLabel?.font = UIFont(font: FashionFontFamily.Supermercado.regular, size: 18)
-        
+        $0.layer.cornerRadius = 10
+        $0.titleLabel?.font = UIFont(font: FashionFontFamily.Roboto.regular, size: 15)
     }
     
     // MARK: - UI
@@ -77,29 +64,29 @@ final class LoginVC: baseVC<LoginReactor>{
             $0.centerX.equalToSuperview()
         }
         idTextField.snp.makeConstraints {
-            $0.height.equalTo(bound.height*0.0548)
+            $0.height.equalTo(35)
         }
         passwordTextField.snp.makeConstraints {
-            $0.height.equalTo(bound.height*0.0548)
+            $0.height.equalTo(35)
         }
         stack.snp.makeConstraints {
             $0.top.equalTo(logoLabel.snp.bottom).offset(bound.height*0.0484)
-            $0.leading.trailing.equalToSuperview().inset(bound.width*0.2352)
+            $0.leading.trailing.equalToSuperview().inset(bound.width*0.2301)
             $0.centerX.equalToSuperview()
         }
         findIdOrPasswordButton.snp.makeConstraints {
             $0.leading.equalTo(stack.snp.leading)
             $0.top.equalTo(stack.snp.bottom)
+            $0.height.equalTo(11)
         }
         toRegisterButton.snp.makeConstraints {
             $0.trailing.equalTo(stack.snp.trailing)
             $0.top.equalTo(stack.snp.bottom)
+            $0.height.equalTo(11)
         }
         loginButton.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
+            $0.leading.trailing.equalToSuperview().inset(bound.width*0.388)
             $0.top.equalTo(stack.snp.bottom).offset(bound.height*0.0390)
-            $0.height.equalTo(bound.height*0.0468)
-            $0.width.equalTo(bound.width*0.2777)
         }
         
     }
@@ -120,11 +107,11 @@ private extension LoginVC{
     func setGradient(){
         let layer = CAGradientLayer()
         layer.colors = [
-            UIColor(red: 0.749, green: 0.733, blue: 0.961, alpha: 1).cgColor,
-            UIColor(red: 0.749, green: 0.733, blue: 0.961, alpha: 1).cgColor,
-            UIColor(red: 0.58, green: 0.859, blue: 0.925, alpha: 1).cgColor
+            UIColor(red: 0.792, green: 0.588, blue: 0.949, alpha: 1).cgColor,
+            UIColor(red: 0.654, green: 0.635, blue: 0.96, alpha: 1).cgColor,
+            UIColor(red: 0.619, green: 0.823, blue: 0.937, alpha: 1).cgColor
         ]
-        layer.locations = [0, 0.44, 1]
+        layer.locations = [0, 0.48, 1]
         layer.startPoint = CGPoint(x: 0.25, y: 0.5)
         layer.endPoint = CGPoint(x: 0.75, y: 0.5)
         layer.bounds = view.bounds.insetBy(dx: -0.5*view.bounds.size.width, dy: -0.5*view.bounds.size.height)

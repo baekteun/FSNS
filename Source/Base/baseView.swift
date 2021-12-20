@@ -15,6 +15,11 @@ class baseView: UIView{
         setLayout()
         configureView()
     }
+    
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     func addView(){}
     func setLayout(){}
     func configureView(){}

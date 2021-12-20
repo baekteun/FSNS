@@ -16,9 +16,7 @@ final class MainCell: baseTableViewCell<FashionModel>{
     
     private let fashionImageView = UIImageView()
     
-    private let hangerButton = UIButton().then {
-        $0.
-    }
+    private let hangerButton = UIButton()
     
     private let starButton = UIButton()
     

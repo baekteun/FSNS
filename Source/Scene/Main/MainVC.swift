@@ -13,12 +13,8 @@ import RxCocoa
 import SnapKit
 
 final class MainVC: baseVC<MainReactor>{
-    // MARK: - Properties
-    private let searchBarButton = SearchButton()
     
-    private let tableView = UITableView().then {
-        $0.register(MainCell.self, forCellReuseIdentifier: MainCell.identifier)
-    }
+    // MARK: - Properties
     
     private let sideBarButton = UIBarButtonItem().then {
         $0.image = UIImage(systemName: "line.3.horizontal")?.withTintColor(.white, renderingMode: .alwaysOriginal)
@@ -26,41 +22,25 @@ final class MainVC: baseVC<MainReactor>{
     
     private let profileImageView = UIBarButtonItem()
     
-    private let dummyData = [
-        FashionModel(fashionImage: FashionAsset.fashionDummyOne.image,
-                     hanger: 4386,
-                     isStarred: true,
-                     isBookmarked: false,
-                     saved: 62),
-        FashionModel(fashionImage: FashionAsset.fashionDummyTwo.image,
-                     hanger: 442,
-                     isStarred: true,
-                     isBookmarked: false,
-                     saved: 28)
-    ]
     
     // MARK: - UI
     override func addView() {
-        [searchBarButton, tableView].forEach{ view.addSubview($0) }
+        [].forEach{ view.addSubview($0) }
     }
     override func setLayout() {
-        searchBarButton.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
-            $0.top.equalTo(view.safeAreaLayoutGuide).offset(bound.height*0.03)
-            $0.leading.trailing.equalToSuperview().inset(bound.width*0.1527)
-            $0.height.equalTo(30)
-        }
-        tableView.snp.makeConstraints {
-            $0.top.equalTo(searchBarButton.snp.bottom).offset(22)
-            $0.centerX.equalToSuperview()
-            $0.leading.trailing.bottom.equalToSuperview()
-        }
         
     }
     override func configureVC() {
         super.configureVC()
-        self.navigationItem.leftBarButtonItem = sideBarButton
+        self.navigationController?.configGradientBar(
+            colors: [
+                UIColor(red: 0.749, green: 0.733, blue: 0.961, alpha: 1).cgColor,
+                UIColor(red: 0.58, green: 0.859, blue: 0.925, alpha: 1).cgColor
+            ],
+            locations: [1, 0])
     }
+    
+    
     
     // MARK: - Reactor
     

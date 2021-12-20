@@ -16,11 +16,26 @@
 
 // swiftlint:disable identifier_name line_length type_body_length
 public enum FashionFontFamily {
+  public enum Roboto {
+    public static let black = FashionFontConvertible(name: "Roboto-Black", family: "Roboto", path: "Roboto-Black.ttf")
+    public static let blackItalic = FashionFontConvertible(name: "Roboto-BlackItalic", family: "Roboto", path: "Roboto-BlackItalic.ttf")
+    public static let bold = FashionFontConvertible(name: "Roboto-Bold", family: "Roboto", path: "Roboto-Bold.ttf")
+    public static let boldItalic = FashionFontConvertible(name: "Roboto-BoldItalic", family: "Roboto", path: "Roboto-BoldItalic.ttf")
+    public static let italic = FashionFontConvertible(name: "Roboto-Italic", family: "Roboto", path: "Roboto-Italic.ttf")
+    public static let light = FashionFontConvertible(name: "Roboto-Light", family: "Roboto", path: "Roboto-Light.ttf")
+    public static let lightItalic = FashionFontConvertible(name: "Roboto-LightItalic", family: "Roboto", path: "Roboto-LightItalic.ttf")
+    public static let medium = FashionFontConvertible(name: "Roboto-Medium", family: "Roboto", path: "Roboto-Medium.ttf")
+    public static let mediumItalic = FashionFontConvertible(name: "Roboto-MediumItalic", family: "Roboto", path: "Roboto-MediumItalic.ttf")
+    public static let regular = FashionFontConvertible(name: "Roboto-Regular", family: "Roboto", path: "Roboto-Regular.ttf")
+    public static let thin = FashionFontConvertible(name: "Roboto-Thin", family: "Roboto", path: "Roboto-Thin.ttf")
+    public static let thinItalic = FashionFontConvertible(name: "Roboto-ThinItalic", family: "Roboto", path: "Roboto-ThinItalic.ttf")
+    public static let all: [FashionFontConvertible] = [black, blackItalic, bold, boldItalic, italic, light, lightItalic, medium, mediumItalic, regular, thin, thinItalic]
+  }
   public enum Supermercado {
     public static let regular = FashionFontConvertible(name: "Supermercado-Regular", family: "Supermercado", path: "SupermercadoOne-Regular.ttf")
     public static let all: [FashionFontConvertible] = [regular]
   }
-  public static let allCustomFonts: [FashionFontConvertible] = [Supermercado.all].flatMap { $0 }
+  public static let allCustomFonts: [FashionFontConvertible] = [Roboto.all, Supermercado.all].flatMap { $0 }
   public static func registerAllCustomFonts() {
     allCustomFonts.forEach { $0.register() }
   }
