@@ -21,6 +21,7 @@
 		3003BC67ABB1B8B76B73108C /* FindPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A421D4F58FED2C9632C4087 /* FindPasswordVC.swift */; };
 		336FFA3B079A9BC7367E2728 /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72451101284F06CC75C4486E /* AppFlow.swift */; };
 		37C303E8A6AFC96ECB05A128 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABFE28CF06FA6D31614292F /* SceneDelegate.swift */; };
+		3E3098B2ABB88E4E8D3AC5AC /* Pods_Fashion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBFEF16123CC317D76793B03 /* Pods_Fashion.framework */; };
 		412EB977CE1F8918A05A4B84 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5E34B9EC035E8C1C478EB9 /* UIViewExt.swift */; };
 		43FEEE9D7D22E2BA27FF1113 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA9911B7DA0D01315B21BB6 /* Comment.swift */; };
 		4509A6A37742C69929204104 /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EA0BB42F5E68A9904B1B95 /* LoginTextField.swift */; };
@@ -42,7 +43,6 @@
 		93E602DCBC6386BD9D016050 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83FFEB2D65F850965B7E1367 /* Roboto-ThinItalic.ttf */; };
 		9693868EDE751FBAC50159B6 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82CCC94D7D40738C4FC70A33 /* Roboto-Bold.ttf */; };
 		988D9ECAD05DBDC685243EC9 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C74397DF2773CEC83771A63 /* Roboto-Light.ttf */; };
-		9E51D4CD3DF74D15768FB5DF /* Pods_Fashion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E3DCCD6BF7BA0F80E7DD6B /* Pods_Fashion.framework */; };
 		A7C34EEE12D9B2D1FC809313 /* FashionStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4410773DCC91BD52E96F0FE /* FashionStep.swift */; };
 		A8D1B3F867CBE0DAB1D3F7C9 /* FONTLOG.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4237234F8D3DB301A5D9D73E /* FONTLOG.txt */; };
 		A94FB44F030671AE8417169D /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF0D8EBF6065F090C6C9A5D /* RegisterVC.swift */; };
@@ -93,7 +93,6 @@
 		3539E748365C2490E9D1B6A5 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		3895A147C93F33762A52EBB5 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		40E723CBF7E8BCDBC43CED9F /* CellReusableID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellReusableID.swift; sourceTree = "<group>"; };
-		416B253909ABE5E9F9D1F8BA /* Pods-Fashion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fashion.release.xcconfig"; path = "Target Support Files/Pods-Fashion/Pods-Fashion.release.xcconfig"; sourceTree = "<group>"; };
 		4237234F8D3DB301A5D9D73E /* FONTLOG.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = FONTLOG.txt; sourceTree = "<group>"; };
 		428A4A791CFE107AF6075F68 /* AuthExtensionTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthExtensionTextField.swift; sourceTree = "<group>"; };
 		491AEDF3AB7DEB28DF35D361 /* UITextFieldExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExt.swift; sourceTree = "<group>"; };
@@ -115,6 +114,7 @@
 		7FF6F74AC23C9C2B4DA1529D /* StepExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepExt.swift; sourceTree = "<group>"; };
 		82CCC94D7D40738C4FC70A33 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		83FFEB2D65F850965B7E1367 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		896DDDB6EDE11AD3355A7196 /* Pods-Fashion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fashion.debug.xcconfig"; path = "Target Support Files/Pods-Fashion/Pods-Fashion.debug.xcconfig"; sourceTree = "<group>"; };
 		8C74397DF2773CEC83771A63 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		94FF586F62B918C09A89A9B5 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
 		9F0E852077350D2DD16902A8 /* baseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baseTableViewCell.swift; sourceTree = "<group>"; };
@@ -122,18 +122,18 @@
 		A7DA27F8D490ED53B290168D /* LoginExtButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginExtButton.swift; sourceTree = "<group>"; };
 		AABFE28CF06FA6D31614292F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AE870965E0A571C9F6DFACB6 /* baseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baseView.swift; sourceTree = "<group>"; };
-		B7E3DCCD6BF7BA0F80E7DD6B /* Pods_Fashion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fashion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B88DB0D896E6A63FE78688A6 /* Bundle+Fashion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Fashion.swift"; sourceTree = "<group>"; };
 		B8A73125854EE04855CA0894 /* UINavigationItemExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationItemExt.swift; sourceTree = "<group>"; };
 		B8F5EDA239A5085D238D910A /* AuthLogoVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthLogoVIew.swift; sourceTree = "<group>"; };
 		BDAEA667ED8EAE17876E3406 /* MainFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlow.swift; sourceTree = "<group>"; };
 		C85095F3E6FE61E8F58F6CA1 /* AuthExtensionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthExtensionButton.swift; sourceTree = "<group>"; };
+		CBFEF16123CC317D76793B03 /* Pods_Fashion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fashion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE71659C987DF62297790369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D4410773DCC91BD52E96F0FE /* FashionStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FashionStep.swift; sourceTree = "<group>"; };
 		D5125B9989AD233D550C4723 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
-		DFEC625EBDD147B066E9BBB6 /* Pods-Fashion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fashion.debug.xcconfig"; path = "Target Support Files/Pods-Fashion/Pods-Fashion.debug.xcconfig"; sourceTree = "<group>"; };
 		E14F9F04ED909188BB64CED3 /* InjectPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectPropertyWrapper.swift; sourceTree = "<group>"; };
 		E5AB1A699B3A0D710AA157A8 /* Fonts+Fashion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fonts+Fashion.swift"; sourceTree = "<group>"; };
+		EBF61E2AE5860EB37ADC2DAE /* Pods-Fashion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fashion.release.xcconfig"; path = "Target Support Files/Pods-Fashion/Pods-Fashion.release.xcconfig"; sourceTree = "<group>"; };
 		EF29CE722AD1795835E4AAD4 /* FindPasswordReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPasswordReactor.swift; sourceTree = "<group>"; };
 		F2B64D1B489FEECE279681E1 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		FE5E34B9EC035E8C1C478EB9 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
@@ -146,7 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E51D4CD3DF74D15768FB5DF /* Pods_Fashion.framework in Frameworks */,
+				3E3098B2ABB88E4E8D3AC5AC /* Pods_Fashion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +164,16 @@
 				F0F5A275C82D1F534B03EB88 /* View */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		0D88521D15523E09B644237D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				896DDDB6EDE11AD3355A7196 /* Pods-Fashion.debug.xcconfig */,
+				EBF61E2AE5860EB37ADC2DAE /* Pods-Fashion.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		0ED889D18345A376B1BCA6A0 /* UIView */ = {
@@ -208,7 +218,7 @@
 				61F28DAFD5E9C1C4572709DB /* Project */,
 				87AD3263F3D6EAD7E6D2E122 /* Frameworks */,
 				D938DDA7750BECBFA77B6E76 /* Products */,
-				8D554A0679FBC5A5C46815B3 /* Pods */,
+				0D88521D15523E09B644237D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -388,7 +398,7 @@
 		87AD3263F3D6EAD7E6D2E122 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B7E3DCCD6BF7BA0F80E7DD6B /* Pods_Fashion.framework */,
+				CBFEF16123CC317D76793B03 /* Pods_Fashion.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -399,16 +409,6 @@
 				40E723CBF7E8BCDBC43CED9F /* CellReusableID.swift */,
 			);
 			path = Cell;
-			sourceTree = "<group>";
-		};
-		8D554A0679FBC5A5C46815B3 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				DFEC625EBDD147B066E9BBB6 /* Pods-Fashion.debug.xcconfig */,
-				416B253909ABE5E9F9D1F8BA /* Pods-Fashion.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
 			sourceTree = "<group>";
 		};
 		8FA1D92CC1C5310F35BD457F /* Resource */ = {
@@ -571,12 +571,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 016D7E9023076F543E903118 /* Build configuration list for PBXNativeTarget "Fashion" */;
 			buildPhases = (
-				A872A4E92036B10DC6FB00B0 /* [CP] Check Pods Manifest.lock */,
+				A348DC79D1E94BD4F454353D /* [CP] Check Pods Manifest.lock */,
 				8FAD969BF4CD0B939214E0AA /* Sources */,
 				C306BAD0AF9E929DE2E5C3A2 /* Resources */,
 				8CBF1A14E79A413238C5AE86 /* Embed Frameworks */,
 				4E13AA506FF89429A027EDAA /* Frameworks */,
-				5AB75DEB2A4A07DACD5BFE5B /* [CP] Embed Pods Frameworks */,
+				CA199E978F11DC029453735C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -643,24 +643,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5AB75DEB2A4A07DACD5BFE5B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Fashion/Pods-Fashion-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Fashion/Pods-Fashion-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Fashion/Pods-Fashion-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A872A4E92036B10DC6FB00B0 /* [CP] Check Pods Manifest.lock */ = {
+		A348DC79D1E94BD4F454353D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -680,6 +663,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA199E978F11DC029453735C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Fashion/Pods-Fashion-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Fashion/Pods-Fashion-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Fashion/Pods-Fashion-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -793,13 +793,13 @@
 		};
 		4D3AE8917759A32EF4ED5440 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DFEC625EBDD147B066E9BBB6 /* Pods-Fashion.debug.xcconfig */;
+			baseConfigurationReference = 896DDDB6EDE11AD3355A7196 /* Pods-Fashion.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Support/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -818,13 +818,13 @@
 		};
 		6983F791E96BE17C7F6CCC10 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 416B253909ABE5E9F9D1F8BA /* Pods-Fashion.release.xcconfig */;
+			baseConfigurationReference = EBF61E2AE5860EB37ADC2DAE /* Pods-Fashion.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Support/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

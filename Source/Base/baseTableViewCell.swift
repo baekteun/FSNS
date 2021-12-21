@@ -9,6 +9,7 @@
 import UIKit
 
 class baseTableViewCell<T>: UITableViewCell{
+    let bound = UIScreen.main.bounds
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

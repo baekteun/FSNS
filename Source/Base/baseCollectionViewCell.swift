@@ -9,6 +9,7 @@
 import UIKit
 
 class baseCollectionViewCell<T>: UICollectionViewCell{
+    let bound = UIScreen.main.bounds
     override init(frame: CGRect) {
         super.init(frame: frame)
         addView()

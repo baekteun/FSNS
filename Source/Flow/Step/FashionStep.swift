@@ -22,5 +22,6 @@ enum FashionStep: Step{
     case registerIsRequired
     
     // Main
+    case mainTabbarIsRequired
     case mainIsRequired
 }
