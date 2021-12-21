@@ -23,6 +23,8 @@
 		4509A6A37742C69929204104 /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EA0BB42F5E68A9904B1B95 /* LoginTextField.swift */; };
 		45A6352F49CEE8DF6ED47551 /* baseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0E852077350D2DD16902A8 /* baseTableViewCell.swift */; };
 		46035583277194B4002AC76F /* MainPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46035582277194B4002AC76F /* MainPageCell.swift */; };
+		46035585277195B4002AC76F /* MainPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46035584277195B4002AC76F /* MainPageModel.swift */; };
+		46035587277196BA002AC76F /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46035586277196BA002AC76F /* Comment.swift */; };
 		46C51AAB9A4387949B608A39 /* UIStackViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D8283C3DE532432FB0875 /* UIStackViewExt.swift */; };
 		46F2BCD127715CB70032CA88 /* LoginExtButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F2BCD027715CB60032CA88 /* LoginExtButton.swift */; };
 		46F2BCD62771688A0032CA88 /* AuthLogoVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F2BCD52771688A0032CA88 /* AuthLogoVIew.swift */; };
@@ -94,6 +96,8 @@
 		4237234F8D3DB301A5D9D73E /* FONTLOG.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = FONTLOG.txt; sourceTree = "<group>"; };
 		428A4A791CFE107AF6075F68 /* AuthExtensionTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthExtensionTextField.swift; sourceTree = "<group>"; };
 		46035582277194B4002AC76F /* MainPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageCell.swift; sourceTree = "<group>"; };
+		46035584277195B4002AC76F /* MainPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageModel.swift; sourceTree = "<group>"; };
+		46035586277196BA002AC76F /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		46F2BCD027715CB60032CA88 /* LoginExtButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginExtButton.swift; sourceTree = "<group>"; };
 		46F2BCD52771688A0032CA88 /* AuthLogoVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthLogoVIew.swift; sourceTree = "<group>"; };
 		46F2BCD8277169D00032CA88 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
@@ -340,6 +344,8 @@
 		4FFDA680A860379396F30A61 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				46035584277195B4002AC76F /* MainPageModel.swift */,
+				46035586277196BA002AC76F /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -708,6 +714,7 @@
 				EF4288F622E39D2CBC5440A2 /* UIButtonExt.swift in Sources */,
 				E1CCFE9F04CBA3CD27976696 /* UINavigationItemExt.swift in Sources */,
 				46C51AAB9A4387949B608A39 /* UIStackViewExt.swift in Sources */,
+				46035585277195B4002AC76F /* MainPageModel.swift in Sources */,
 				5FE2F26601BDCB426159054B /* UITextFieldExt.swift in Sources */,
 				336FFA3B079A9BC7367E2728 /* AppFlow.swift in Sources */,
 				226BED92CC4C23D23CCA3F9A /* LoginFlow.swift in Sources */,
@@ -721,6 +728,7 @@
 				F23931869CE7603DB71C751D /* LoginVC.swift in Sources */,
 				4F013C970A3EC7D344217BB0 /* RegisterReactor.swift in Sources */,
 				A94FB44F030671AE8417169D /* RegisterVC.swift in Sources */,
+				46035587277196BA002AC76F /* Comment.swift in Sources */,
 				F79763138AA4D478D5E765E4 /* MainReactor.swift in Sources */,
 				7B6CDECEC895C344A39C95C0 /* MainVC.swift in Sources */,
 				1C938618CA3FCCBAF3E30891 /* AuthExtensionButton.swift in Sources */,
