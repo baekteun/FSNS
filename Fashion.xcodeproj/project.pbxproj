@@ -25,6 +25,7 @@
 		46035583277194B4002AC76F /* MainPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46035582277194B4002AC76F /* MainPageCell.swift */; };
 		46035585277195B4002AC76F /* MainPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46035584277195B4002AC76F /* MainPageModel.swift */; };
 		46035587277196BA002AC76F /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46035586277196BA002AC76F /* Comment.swift */; };
+		4603558A27719A9D002AC76F /* CellReusableID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4603558927719A9D002AC76F /* CellReusableID.swift */; };
 		46C51AAB9A4387949B608A39 /* UIStackViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D8283C3DE532432FB0875 /* UIStackViewExt.swift */; };
 		46F2BCD127715CB70032CA88 /* LoginExtButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F2BCD027715CB60032CA88 /* LoginExtButton.swift */; };
 		46F2BCD62771688A0032CA88 /* AuthLogoVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F2BCD52771688A0032CA88 /* AuthLogoVIew.swift */; };
@@ -98,6 +99,7 @@
 		46035582277194B4002AC76F /* MainPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageCell.swift; sourceTree = "<group>"; };
 		46035584277195B4002AC76F /* MainPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageModel.swift; sourceTree = "<group>"; };
 		46035586277196BA002AC76F /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		4603558927719A9D002AC76F /* CellReusableID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellReusableID.swift; sourceTree = "<group>"; };
 		46F2BCD027715CB60032CA88 /* LoginExtButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginExtButton.swift; sourceTree = "<group>"; };
 		46F2BCD52771688A0032CA88 /* AuthLogoVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthLogoVIew.swift; sourceTree = "<group>"; };
 		46F2BCD8277169D00032CA88 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
@@ -307,6 +309,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		4603558827719A8F002AC76F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4603558927719A9D002AC76F /* CellReusableID.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		46F2BCD7277169C60032CA88 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
@@ -443,6 +453,7 @@
 		96BBD0E359F8EA34B48D678C /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				4603558827719A8F002AC76F /* Cell */,
 				46F2BCD7277169C60032CA88 /* UIView */,
 				C30AFCD2B4624108CD18C458 /* UIButton */,
 				A30D3ADD6D624D715999A85B /* UINavigationController */,
@@ -720,6 +731,7 @@
 				226BED92CC4C23D23CCA3F9A /* LoginFlow.swift in Sources */,
 				742B7A7B4BF33C65B0418F3F /* MainFlow.swift in Sources */,
 				46F2BCD127715CB70032CA88 /* LoginExtButton.swift in Sources */,
+				4603558A27719A9D002AC76F /* CellReusableID.swift in Sources */,
 				A7C34EEE12D9B2D1FC809313 /* FashionStep.swift in Sources */,
 				1FBE4F0B7FE118846B48148B /* FindPasswordReactor.swift in Sources */,
 				3003BC67ABB1B8B76B73108C /* FindPasswordVC.swift in Sources */,
