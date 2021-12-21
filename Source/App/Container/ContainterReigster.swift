@@ -19,10 +19,12 @@ extension Container{
         autoregister(LoginVC.self, initializer: LoginVC.init)
         autoregister(RegisterVC.self, initializer: RegisterVC.init)
         autoregister(FindPasswordVC.self, initializer: FindPasswordVC.init)
+        autoregister(MainVC.self, initializer: MainVC.init)
     }
     func registerReactor(){
         autoregister(LoginReactor.self, initializer: LoginReactor.init)
         autoregister(RegisterReactor.self, initializer: RegisterReactor.init)
         autoregister(FindPasswordReactor.self, initializer: FindPasswordReactor.init)
+        autoregister(MainReactor.self, initializer: MainReactor.init)
     }
 }
