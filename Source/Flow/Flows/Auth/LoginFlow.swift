@@ -8,6 +8,7 @@
 
 import RxFlow
 import RxRelay
+import PanModal
 
 struct LoginStepper: Stepper{
     let steps: PublishRelay<Step> = .init()
@@ -19,6 +20,8 @@ struct LoginStepper: Stepper{
 
 final class LoginFlow: Flow{
     // MARK: - Properties
+    @Inject var vc: LoginVC
+    
     var root: Presentable{
         return self.rootVC
     }
@@ -40,12 +43,13 @@ final class LoginFlow: Flow{
     // MARK: - Navigate
     func navigate(to step: Step) -> FlowContributors {
         guard let step = step.asFashionStep else { return .none }
-        
         switch step{
         case .loginIsRequired:
             return coordinateToLogin()
         case .mainIsRequired:
             return .end(forwardToParentFlowWithStep: FashionStep.mainIsRequired)
+        case .findPasswordIsRequired:
+            return navigateToFindPassword()
         default:
             return .none
         }
@@ -55,9 +59,12 @@ final class LoginFlow: Flow{
 // MARK: - Method
 private extension LoginFlow{
     func coordinateToLogin() -> FlowContributors{
-        let reactor = LoginReactor()
-        let vc = LoginVC(reactor: reactor)
         self.rootVC.pushViewController(vc, animated: true)
-        return .one(flowContributor: .contribute(withNextPresentable: vc, withNextStepper: reactor))
+        return .one(flowContributor: .contribute(withNextPresentable: vc, withNextStepper: vc.reactor))
+    }
+    func navigateToFindPassword() -> FlowContributors{
+        let vc = FindPasswordVC()
+        self.rootVC.presentPanModal(vc)
+        return .one(flowContributor: .contribute(withNextPresentable: vc, withNextStepper: vc.reactor))
     }
 }

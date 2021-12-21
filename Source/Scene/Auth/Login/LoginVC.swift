@@ -38,20 +38,9 @@ final class LoginVC: baseVC<LoginReactor>{
         $0.addUnderline()
     }
     
-    private let toRegisterButton = UIButton().then {
-        $0.setTitle("회원가입", for: .normal)
-        $0.setTitleColor(.white, for: .normal)
-        $0.titleLabel?.font = UIFont(font: FashionFontFamily.Supermercado.regular, size: 11)
-        $0.addUnderline()
-    }
+    private let loginButton = LoginExtButton(title: "로그인")
     
-    private let loginButton = UIButton().then {
-        $0.setTitle("Login", for: .normal)
-        $0.setTitleColor(.black, for: .normal)
-        $0.backgroundColor = .white
-        $0.layer.cornerRadius = 10
-        $0.titleLabel?.font = UIFont(font: FashionFontFamily.Roboto.regular, size: 15)
-    }
+    private let toRegisterButton = LoginExtButton(title: "회원가입", backgroundColor: .init(red: 1.0, green: 0.6823, blue: 0.6823, alpha: 1))
     
     // MARK: - UI
     override func addView() {
@@ -75,18 +64,17 @@ final class LoginVC: baseVC<LoginReactor>{
             $0.centerX.equalToSuperview()
         }
         findIdOrPasswordButton.snp.makeConstraints {
-            $0.leading.equalTo(stack.snp.leading)
-            $0.top.equalTo(stack.snp.bottom)
-            $0.height.equalTo(11)
-        }
-        toRegisterButton.snp.makeConstraints {
-            $0.trailing.equalTo(stack.snp.trailing)
-            $0.top.equalTo(stack.snp.bottom)
+            $0.bottom.equalToSuperview().inset(5)
+            $0.centerX.equalToSuperview()
             $0.height.equalTo(11)
         }
         loginButton.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview().inset(bound.width*0.388)
             $0.top.equalTo(stack.snp.bottom).offset(bound.height*0.0390)
+        }
+        toRegisterButton.snp.makeConstraints {
+            $0.top.equalTo(loginButton.snp.bottom).offset(20)
+            $0.leading.trailing.equalTo(loginButton)
         }
         
     }
@@ -96,6 +84,10 @@ final class LoginVC: baseVC<LoginReactor>{
     override func bindView(reactor: LoginReactor) {
         loginButton.rx.tap
             .map { _ in Reactor.Action.loginButtonDidTap }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        findIdOrPasswordButton.rx.tap
+            .map { Reactor.Action.findPasswordButtonDidTap }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
     }

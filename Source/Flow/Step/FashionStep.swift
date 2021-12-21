@@ -15,6 +15,9 @@ enum FashionStep: Step{
     
     // Auth
     case loginIsRequired
+    case loginIsCompleted
+    case findPasswordIsRequired
+    case registerIsRequired
     
     // Main
     case mainIsRequired

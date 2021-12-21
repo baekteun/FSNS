@@ -22,6 +22,7 @@ final class LoginReactor: Reactor, Stepper{
         case updateID(String?)
         case updatePassword(String?)
         case loginButtonDidTap
+        case findPasswordButtonDidTap
     }
     enum Mutation{
         case setID(String?)
@@ -46,6 +47,9 @@ extension LoginReactor{
             return .just(.setPassword(pwd))
         case .loginButtonDidTap:
             steps.accept(FashionStep.mainIsRequired)
+            return .empty()
+        case .findPasswordButtonDidTap:
+            steps.accept(FashionStep.findPasswordIsRequired)
             return .empty()
         }
     }

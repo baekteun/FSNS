@@ -7,8 +7,9 @@
 
 import UIKit
 import ReactorKit
+import RxFlow
 
-class baseVC<T: Reactor>: UIViewController{
+class baseVC<T: Reactor & Stepper>: UIViewController{
     let bound = UIScreen.main.bounds
     var disposeBag: DisposeBag = .init()
     
@@ -26,6 +27,11 @@ class baseVC<T: Reactor>: UIViewController{
         configureWillAppear()
     }
     
+    @Inject var reactor: T
+    
+    init() {
+        super.init(nibName: nil, bundle: nil)
+    }
     init(reactor: T){
         super.init(nibName: nil, bundle: nil)
         self.reactor = reactor

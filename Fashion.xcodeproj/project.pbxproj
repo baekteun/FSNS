@@ -7,22 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0437FD23897159C18F1C3819 /* InjectPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14F9F04ED909188BB64CED3 /* InjectPropertyWrapper.swift */; };
 		0FB2106A5EC964DC3BBE849D /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F5BEC83425496B7AAE9DE70 /* Roboto-Black.ttf */; };
 		11C9D4730DED5503B40684C1 /* Fonts+Fashion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB1A699B3A0D710AA157A8 /* Fonts+Fashion.swift */; };
+		1C938618CA3FCCBAF3E30891 /* AuthExtensionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85095F3E6FE61E8F58F6CA1 /* AuthExtensionButton.swift */; };
+		1FBE4F0B7FE118846B48148B /* FindPasswordReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF29CE722AD1795835E4AAD4 /* FindPasswordReactor.swift */; };
 		226BED92CC4C23D23CCA3F9A /* LoginFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15244FC8918A8DA2C3128C10 /* LoginFlow.swift */; };
 		23A5E69CB14A5A1EF6F9F45A /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DD9183E4009C98BBCC803E2 /* Roboto-BlackItalic.ttf */; };
 		2676AE554AD7B543E03DAB5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672E538F92B4CD3CD1DE19F1 /* AppDelegate.swift */; };
 		27AD849D892EA8A5E11CC6B0 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937606B2BF4BD9E5453AE57E /* MainCell.swift */; };
 		2D6EB990E5A487DA3C2CCEE0 /* SupermercadoOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 774B4C23D723DBAEC3F6ABBA /* SupermercadoOne-Regular.ttf */; };
+		3003BC67ABB1B8B76B73108C /* FindPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A421D4F58FED2C9632C4087 /* FindPasswordVC.swift */; };
 		336FFA3B079A9BC7367E2728 /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72451101284F06CC75C4486E /* AppFlow.swift */; };
 		37C303E8A6AFC96ECB05A128 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABFE28CF06FA6D31614292F /* SceneDelegate.swift */; };
 		4509A6A37742C69929204104 /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EA0BB42F5E68A9904B1B95 /* LoginTextField.swift */; };
 		45A6352F49CEE8DF6ED47551 /* baseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0E852077350D2DD16902A8 /* baseTableViewCell.swift */; };
-		46F2BCB92770BCEC0032CA88 /* FindPasswordReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F2BCB82770BCEC0032CA88 /* FindPasswordReactor.swift */; };
-		46F2BCBC2770BD1D0032CA88 /* FindPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F2BCBB2770BD1D0032CA88 /* FindPasswordVC.swift */; };
-		46F2BCBF2770BD400032CA88 /* RegisterReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F2BCBE2770BD400032CA88 /* RegisterReactor.swift */; };
-		46F2BCC12770BD570032CA88 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F2BCC02770BD570032CA88 /* RegisterVC.swift */; };
+		46C51AAB9A4387949B608A39 /* UIStackViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D8283C3DE532432FB0875 /* UIStackViewExt.swift */; };
+		46F2BCD127715CB70032CA88 /* LoginExtButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F2BCD027715CB60032CA88 /* LoginExtButton.swift */; };
 		489BC41BE647F0F162F352FF /* StepExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF6F74AC23C9C2B4DA1529D /* StepExt.swift */; };
+		4BFA5C836F019921FEB18954 /* Pods_Fashion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6750D27599BBD3A2A8C73EA /* Pods_Fashion.framework */; };
+		4F013C970A3EC7D344217BB0 /* RegisterReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ADEC2440929CCB919B8B87 /* RegisterReactor.swift */; };
 		4F3439134107071BA1D335DE /* baseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE870965E0A571C9F6DFACB6 /* baseView.swift */; };
 		5FE2F26601BDCB426159054B /* UITextFieldExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491AEDF3AB7DEB28DF35D361 /* UITextFieldExt.swift */; };
 		6DADE08DDAF1D1C87DCD8775 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F8764DA5EC7A5D56E47079C /* Roboto-Medium.ttf */; };
@@ -38,13 +42,15 @@
 		98FDA5A11CAF277D440317D7 /* SearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023CFEF74A1AFCB443E3BAB5 /* SearchButton.swift */; };
 		A7C34EEE12D9B2D1FC809313 /* FashionStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4410773DCC91BD52E96F0FE /* FashionStep.swift */; };
 		A8D1B3F867CBE0DAB1D3F7C9 /* FONTLOG.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4237234F8D3DB301A5D9D73E /* FONTLOG.txt */; };
+		A94FB44F030671AE8417169D /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF0D8EBF6065F090C6C9A5D /* RegisterVC.swift */; };
+		AA282C182755645CB8D16D6C /* ContainterReigster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8F1790ADBF2D4C1BF7EAF /* ContainterReigster.swift */; };
 		AE39D36BDB99FBB613D56B10 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DD295E833A97CFDB8B53441 /* Roboto-Regular.ttf */; };
-		CC3704A7D6E369DD834166F0 /* Pods_Fashion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9E841389298C9579632A15 /* Pods_Fashion.framework */; };
 		CF072AEB6F2594601FE2660A /* FashionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE1486518EEE0B75FC5D3D1 /* FashionModel.swift */; };
 		CF6CE6B0F382679A5D326339 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62B485427D7D4DA84C07EC96 /* Roboto-MediumItalic.ttf */; };
 		D3C2F17E646AB9428D494D17 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 201480CC301EFEE655C0FC34 /* OFL.txt */; };
 		E1CCFE9F04CBA3CD27976696 /* UINavigationItemExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A73125854EE04855CA0894 /* UINavigationItemExt.swift */; };
 		E2144776497B28A3E0ADCF4A /* baseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B80B531973F956571F1F997 /* baseVC.swift */; };
+		E2D79646A79483ED3BAF55A6 /* AuthExtensionTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428A4A791CFE107AF6075F68 /* AuthExtensionTextField.swift */; };
 		E413D739BFC04EE57147EDDE /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D5125B9989AD233D550C4723 /* Roboto-Italic.ttf */; };
 		E5A11168BE2BF0DDDC44DA71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F48745093407320E5BA5AE /* LaunchScreen.storyboard */; };
 		EB54DAB10E7AABD20450A791 /* LoginReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0931351E9087337AE0C079 /* LoginReactor.swift */; };
@@ -76,33 +82,32 @@
 		06716981517809E990E81D0B /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
 		0BE1486518EEE0B75FC5D3D1 /* FashionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FashionModel.swift; sourceTree = "<group>"; };
 		15244FC8918A8DA2C3128C10 /* LoginFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFlow.swift; sourceTree = "<group>"; };
-		1B9E841389298C9579632A15 /* Pods_Fashion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fashion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A421D4F58FED2C9632C4087 /* FindPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPasswordVC.swift; sourceTree = "<group>"; };
 		1E1AD80C4D33E44E193C14A1 /* UIButtonExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExt.swift; sourceTree = "<group>"; };
 		1F7A7C3CADB3BAC56E5C450A /* Fashion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fashion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		201480CC301EFEE655C0FC34 /* OFL.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		2DD9183E4009C98BBCC803E2 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		33ADEC2440929CCB919B8B87 /* RegisterReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterReactor.swift; sourceTree = "<group>"; };
 		3539E748365C2490E9D1B6A5 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		3895A147C93F33762A52EBB5 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
-		3E7BA4B744C3939D79FCEA48 /* Pods-Fashion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fashion.release.xcconfig"; path = "Target Support Files/Pods-Fashion/Pods-Fashion.release.xcconfig"; sourceTree = "<group>"; };
 		4237234F8D3DB301A5D9D73E /* FONTLOG.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = FONTLOG.txt; sourceTree = "<group>"; };
-		46F2BCB82770BCEC0032CA88 /* FindPasswordReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPasswordReactor.swift; sourceTree = "<group>"; };
-		46F2BCBB2770BD1D0032CA88 /* FindPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPasswordVC.swift; sourceTree = "<group>"; };
-		46F2BCBE2770BD400032CA88 /* RegisterReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterReactor.swift; sourceTree = "<group>"; };
-		46F2BCC02770BD570032CA88 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		428A4A791CFE107AF6075F68 /* AuthExtensionTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthExtensionTextField.swift; sourceTree = "<group>"; };
+		46F2BCD027715CB60032CA88 /* LoginExtButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginExtButton.swift; sourceTree = "<group>"; };
 		491AEDF3AB7DEB28DF35D361 /* UITextFieldExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExt.swift; sourceTree = "<group>"; };
 		4B80B531973F956571F1F997 /* baseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baseVC.swift; sourceTree = "<group>"; };
 		4DD295E833A97CFDB8B53441 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		4F8764DA5EC7A5D56E47079C /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		55B8F1790ADBF2D4C1BF7EAF /* ContainterReigster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainterReigster.swift; sourceTree = "<group>"; };
 		582995DEECAC4FA0DF487E91 /* Assets+Fashion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Assets+Fashion.swift"; sourceTree = "<group>"; };
 		5A90EF1F7E4118947A52ACFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62B485427D7D4DA84C07EC96 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
-		6397BB6080C777D6B5B1CF40 /* Pods-Fashion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fashion.debug.xcconfig"; path = "Target Support Files/Pods-Fashion/Pods-Fashion.debug.xcconfig"; sourceTree = "<group>"; };
 		672E538F92B4CD3CD1DE19F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69EA0BB42F5E68A9904B1B95 /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
 		6E0931351E9087337AE0C079 /* LoginReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReactor.swift; sourceTree = "<group>"; };
 		71BEF4E5D7004F08AC17D512 /* MainReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainReactor.swift; sourceTree = "<group>"; };
 		72451101284F06CC75C4486E /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
 		774B4C23D723DBAEC3F6ABBA /* SupermercadoOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SupermercadoOne-Regular.ttf"; sourceTree = "<group>"; };
+		7AF0D8EBF6065F090C6C9A5D /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		7FF6F74AC23C9C2B4DA1529D /* StepExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepExt.swift; sourceTree = "<group>"; };
 		82CCC94D7D40738C4FC70A33 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		83FFEB2D65F850965B7E1367 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
@@ -111,16 +116,23 @@
 		94FF586F62B918C09A89A9B5 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
 		9F0E852077350D2DD16902A8 /* baseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baseTableViewCell.swift; sourceTree = "<group>"; };
 		9F5BEC83425496B7AAE9DE70 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		A6750D27599BBD3A2A8C73EA /* Pods_Fashion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fashion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AABFE28CF06FA6D31614292F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AE870965E0A571C9F6DFACB6 /* baseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baseView.swift; sourceTree = "<group>"; };
 		B88DB0D896E6A63FE78688A6 /* Bundle+Fashion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Fashion.swift"; sourceTree = "<group>"; };
 		B8A73125854EE04855CA0894 /* UINavigationItemExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationItemExt.swift; sourceTree = "<group>"; };
 		BDAEA667ED8EAE17876E3406 /* MainFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlow.swift; sourceTree = "<group>"; };
+		C85095F3E6FE61E8F58F6CA1 /* AuthExtensionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthExtensionButton.swift; sourceTree = "<group>"; };
 		CE71659C987DF62297790369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D4410773DCC91BD52E96F0FE /* FashionStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FashionStep.swift; sourceTree = "<group>"; };
 		D5125B9989AD233D550C4723 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		DE79281F187EB2D227A70E59 /* Pods-Fashion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fashion.debug.xcconfig"; path = "Target Support Files/Pods-Fashion/Pods-Fashion.debug.xcconfig"; sourceTree = "<group>"; };
+		DED321BDC3ED33E56CFAD875 /* Pods-Fashion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fashion.release.xcconfig"; path = "Target Support Files/Pods-Fashion/Pods-Fashion.release.xcconfig"; sourceTree = "<group>"; };
+		E14F9F04ED909188BB64CED3 /* InjectPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectPropertyWrapper.swift; sourceTree = "<group>"; };
 		E5AB1A699B3A0D710AA157A8 /* Fonts+Fashion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fonts+Fashion.swift"; sourceTree = "<group>"; };
+		EF29CE722AD1795835E4AAD4 /* FindPasswordReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPasswordReactor.swift; sourceTree = "<group>"; };
 		F2B64D1B489FEECE279681E1 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		FF5D8283C3DE532432FB0875 /* UIStackViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC3704A7D6E369DD834166F0 /* Pods_Fashion.framework in Frameworks */,
+				4BFA5C836F019921FEB18954 /* Pods_Fashion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +158,15 @@
 				F0F5A275C82D1F534B03EB88 /* View */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		0D991F51CA6D485F528BEC31 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE79281F187EB2D227A70E59 /* Pods-Fashion.debug.xcconfig */,
+				DED321BDC3ED33E56CFAD875 /* Pods-Fashion.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		0EEBF8AC8E5536C2EB3A41CA /* Login */ = {
@@ -182,8 +203,17 @@
 				61F28DAFD5E9C1C4572709DB /* Project */,
 				87AD3263F3D6EAD7E6D2E122 /* Frameworks */,
 				D938DDA7750BECBFA77B6E76 /* Products */,
-				D033D84488AACA4F0DA85F6B /* Pods */,
+				0D991F51CA6D485F528BEC31 /* Pods */,
 			);
+			sourceTree = "<group>";
+		};
+		2364D54D2BCAADEF31627C28 /* FindPassword */ = {
+			isa = PBXGroup;
+			children = (
+				EF29CE722AD1795835E4AAD4 /* FindPasswordReactor.swift */,
+				1A421D4F58FED2C9632C4087 /* FindPasswordVC.swift */,
+			);
+			path = FindPassword;
 			sourceTree = "<group>";
 		};
 		27259E23DBF10A6DDCE53CA0 /* Sources */ = {
@@ -225,6 +255,15 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		32158F33E6806AC9206D8272 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				55B8F1790ADBF2D4C1BF7EAF /* ContainterReigster.swift */,
+				E14F9F04ED909188BB64CED3 /* InjectPropertyWrapper.swift */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
 		329BEAB942E745BA85CC7274 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,24 +281,6 @@
 				72451101284F06CC75C4486E /* AppFlow.swift */,
 			);
 			path = Flow;
-			sourceTree = "<group>";
-		};
-		46F2BCB72770BCE00032CA88 /* FindPassword */ = {
-			isa = PBXGroup;
-			children = (
-				46F2BCB82770BCEC0032CA88 /* FindPasswordReactor.swift */,
-				46F2BCBB2770BD1D0032CA88 /* FindPasswordVC.swift */,
-			);
-			path = FindPassword;
-			sourceTree = "<group>";
-		};
-		46F2BCBD2770BD380032CA88 /* Register */ = {
-			isa = PBXGroup;
-			children = (
-				46F2BCBE2770BD400032CA88 /* RegisterReactor.swift */,
-				46F2BCC02770BD570032CA88 /* RegisterVC.swift */,
-			);
-			path = Register;
 			sourceTree = "<group>";
 		};
 		4B658A28DDCA20AFAD0DB951 /* Flows */ = {
@@ -344,6 +365,7 @@
 			isa = PBXGroup;
 			children = (
 				69EA0BB42F5E68A9904B1B95 /* LoginTextField.swift */,
+				46F2BCD027715CB60032CA88 /* LoginExtButton.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -351,6 +373,7 @@
 		8422A8146364788881925372 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				32158F33E6806AC9206D8272 /* Container */,
 				672E538F92B4CD3CD1DE19F1 /* AppDelegate.swift */,
 				AABFE28CF06FA6D31614292F /* SceneDelegate.swift */,
 			);
@@ -360,7 +383,7 @@
 		87AD3263F3D6EAD7E6D2E122 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1B9E841389298C9579632A15 /* Pods_Fashion.framework */,
+				A6750D27599BBD3A2A8C73EA /* Pods_Fashion.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -389,6 +412,7 @@
 			children = (
 				C30AFCD2B4624108CD18C458 /* UIButton */,
 				A30D3ADD6D624D715999A85B /* UINavigationController */,
+				B0786914089707E13213CECB /* UIStackView */,
 				C612ECFF40E0B3DA1DAE933C /* UITextFIeld */,
 			);
 			path = UIKit;
@@ -397,6 +421,7 @@
 		9FD38F8D92CBB8041AF38EDD /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				BBDEB3899B7E725EE8D93546 /* FindPassword */,
 				7FAF7298C4FA1A6DB870410A /* Login */,
 			);
 			path = Auth;
@@ -410,6 +435,14 @@
 			path = UINavigationController;
 			sourceTree = "<group>";
 		};
+		B0786914089707E13213CECB /* UIStackView */ = {
+			isa = PBXGroup;
+			children = (
+				FF5D8283C3DE532432FB0875 /* UIStackViewExt.swift */,
+			);
+			path = UIStackView;
+			sourceTree = "<group>";
+		};
 		B16D28D4DA18D6CFD1BC2505 /* supermercado */ = {
 			isa = PBXGroup;
 			children = (
@@ -417,6 +450,15 @@
 				201480CC301EFEE655C0FC34 /* OFL.txt */,
 			);
 			path = supermercado;
+			sourceTree = "<group>";
+		};
+		BBDEB3899B7E725EE8D93546 /* FindPassword */ = {
+			isa = PBXGroup;
+			children = (
+				C85095F3E6FE61E8F58F6CA1 /* AuthExtensionButton.swift */,
+				428A4A791CFE107AF6075F68 /* AuthExtensionTextField.swift */,
+			);
+			path = FindPassword;
 			sourceTree = "<group>";
 		};
 		C30AFCD2B4624108CD18C458 /* UIButton */ = {
@@ -444,21 +486,21 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		D033D84488AACA4F0DA85F6B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6397BB6080C777D6B5B1CF40 /* Pods-Fashion.debug.xcconfig */,
-				3E7BA4B744C3939D79FCEA48 /* Pods-Fashion.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		D938DDA7750BECBFA77B6E76 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				1F7A7C3CADB3BAC56E5C450A /* Fashion.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DA214CCFEF16D62CD140F332 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				33ADEC2440929CCB919B8B87 /* RegisterReactor.swift */,
+				7AF0D8EBF6065F090C6C9A5D /* RegisterVC.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 		DA7DB81167BD83FFE4642A77 /* Cell */ = {
@@ -489,9 +531,9 @@
 		F8685573D47EC17424E8E7EA /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				46F2BCBD2770BD380032CA88 /* Register */,
-				46F2BCB72770BCE00032CA88 /* FindPassword */,
+				2364D54D2BCAADEF31627C28 /* FindPassword */,
 				0EEBF8AC8E5536C2EB3A41CA /* Login */,
+				DA214CCFEF16D62CD140F332 /* Register */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -503,12 +545,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 016D7E9023076F543E903118 /* Build configuration list for PBXNativeTarget "Fashion" */;
 			buildPhases = (
-				1C976AA4871E6218105A51B6 /* [CP] Check Pods Manifest.lock */,
+				ABB196D9410293DF2EEA41E6 /* [CP] Check Pods Manifest.lock */,
 				8FAD969BF4CD0B939214E0AA /* Sources */,
 				C306BAD0AF9E929DE2E5C3A2 /* Resources */,
 				8CBF1A14E79A413238C5AE86 /* Embed Frameworks */,
 				4E13AA506FF89429A027EDAA /* Frameworks */,
-				95E3B14EAF6391305E408D9D /* [CP] Embed Pods Frameworks */,
+				7EC64A59E0E3FCDD4FA98D85 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -573,7 +615,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1C976AA4871E6218105A51B6 /* [CP] Check Pods Manifest.lock */ = {
+		7EC64A59E0E3FCDD4FA98D85 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Fashion/Pods-Fashion-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Fashion/Pods-Fashion-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Fashion/Pods-Fashion-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABB196D9410293DF2EEA41E6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -595,23 +654,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		95E3B14EAF6391305E408D9D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Fashion/Pods-Fashion-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Fashion/Pods-Fashion-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Fashion/Pods-Fashion-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -619,11 +661,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46F2BCB92770BCEC0032CA88 /* FindPasswordReactor.swift in Sources */,
 				EF69B83CC0E216017680263E /* Assets+Fashion.swift in Sources */,
 				F69492CC7DE1429554EB4CA2 /* Bundle+Fashion.swift in Sources */,
 				11C9D4730DED5503B40684C1 /* Fonts+Fashion.swift in Sources */,
 				2676AE554AD7B543E03DAB5A /* AppDelegate.swift in Sources */,
+				AA282C182755645CB8D16D6C /* ContainterReigster.swift in Sources */,
+				0437FD23897159C18F1C3819 /* InjectPropertyWrapper.swift in Sources */,
 				37C303E8A6AFC96ECB05A128 /* SceneDelegate.swift in Sources */,
 				890921CDEE7ED3065B43C025 /* baseCollectionViewCell.swift in Sources */,
 				45A6352F49CEE8DF6ED47551 /* baseTableViewCell.swift in Sources */,
@@ -632,20 +675,25 @@
 				489BC41BE647F0F162F352FF /* StepExt.swift in Sources */,
 				EF4288F622E39D2CBC5440A2 /* UIButtonExt.swift in Sources */,
 				E1CCFE9F04CBA3CD27976696 /* UINavigationItemExt.swift in Sources */,
+				46C51AAB9A4387949B608A39 /* UIStackViewExt.swift in Sources */,
 				5FE2F26601BDCB426159054B /* UITextFieldExt.swift in Sources */,
 				CF072AEB6F2594601FE2660A /* FashionModel.swift in Sources */,
 				336FFA3B079A9BC7367E2728 /* AppFlow.swift in Sources */,
 				226BED92CC4C23D23CCA3F9A /* LoginFlow.swift in Sources */,
 				742B7A7B4BF33C65B0418F3F /* MainFlow.swift in Sources */,
+				46F2BCD127715CB70032CA88 /* LoginExtButton.swift in Sources */,
 				A7C34EEE12D9B2D1FC809313 /* FashionStep.swift in Sources */,
+				1FBE4F0B7FE118846B48148B /* FindPasswordReactor.swift in Sources */,
+				3003BC67ABB1B8B76B73108C /* FindPasswordVC.swift in Sources */,
 				EB54DAB10E7AABD20450A791 /* LoginReactor.swift in Sources */,
 				F23931869CE7603DB71C751D /* LoginVC.swift in Sources */,
-				46F2BCBF2770BD400032CA88 /* RegisterReactor.swift in Sources */,
+				4F013C970A3EC7D344217BB0 /* RegisterReactor.swift in Sources */,
+				A94FB44F030671AE8417169D /* RegisterVC.swift in Sources */,
 				F79763138AA4D478D5E765E4 /* MainReactor.swift in Sources */,
 				7B6CDECEC895C344A39C95C0 /* MainVC.swift in Sources */,
-				46F2BCBC2770BD1D0032CA88 /* FindPasswordVC.swift in Sources */,
+				1C938618CA3FCCBAF3E30891 /* AuthExtensionButton.swift in Sources */,
+				E2D79646A79483ED3BAF55A6 /* AuthExtensionTextField.swift in Sources */,
 				4509A6A37742C69929204104 /* LoginTextField.swift in Sources */,
-				46F2BCC12770BD570032CA88 /* RegisterVC.swift in Sources */,
 				27AD849D892EA8A5E11CC6B0 /* MainCell.swift in Sources */,
 				98FDA5A11CAF277D440317D7 /* SearchButton.swift in Sources */,
 			);
@@ -706,6 +754,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -714,7 +763,7 @@
 		};
 		4D3AE8917759A32EF4ED5440 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6397BB6080C777D6B5B1CF40 /* Pods-Fashion.debug.xcconfig */;
+			baseConfigurationReference = DE79281F187EB2D227A70E59 /* Pods-Fashion.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -739,7 +788,7 @@
 		};
 		6983F791E96BE17C7F6CCC10 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3E7BA4B744C3939D79FCEA48 /* Pods-Fashion.release.xcconfig */;
+			baseConfigurationReference = DED321BDC3ED33E56CFAD875 /* Pods-Fashion.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -807,6 +856,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;

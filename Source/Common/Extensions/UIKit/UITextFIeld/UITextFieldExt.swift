@@ -19,7 +19,7 @@ extension UITextField{
         leftViewMode = .always
         
     }
-    func addUnderline(){
+    func addUnderline(with color: UIColor = .white){
         let line = UIView()
         line.backgroundColor = .white
         self.addSubview(line)
