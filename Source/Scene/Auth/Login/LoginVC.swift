@@ -64,7 +64,7 @@ final class LoginVC: baseVC<LoginReactor>{
             $0.centerX.equalToSuperview()
         }
         findIdOrPasswordButton.snp.makeConstraints {
-            $0.bottom.equalToSuperview().inset(5)
+            $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).inset(1)
             $0.centerX.equalToSuperview()
             $0.height.equalTo(11)
         }
@@ -86,8 +86,14 @@ final class LoginVC: baseVC<LoginReactor>{
             .map { _ in Reactor.Action.loginButtonDidTap }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
+        
         findIdOrPasswordButton.rx.tap
             .map { Reactor.Action.findPasswordButtonDidTap }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        toRegisterButton.rx.tap
+            .map { Reactor.Action.toRegisterButtonDidTap }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
     }

@@ -21,7 +21,12 @@ final class FindPasswordVC: baseVC<FindPasswordReactor>, PanModalPresentable{
     var longFormHeight: PanModalHeight{
         return .contentHeight(bound.height*0.4203)
     }
-    private let nameTextField = AuthExtensionTextField(icon: UIImage(systemName: "person.fill")?.withTintColor(.blue, renderingMode: .alwaysOriginal) ?? .init(), placeholder: "이름을 입력하세요.")
+    var cornerRadius: CGFloat{
+        return 10
+    }
+    private let logoView = AuthLogoView(title: "아이디/비번찾기")
+    
+    private let nameTextField = AuthExtensionTextField(icon: UIImage(systemName: "person.fill")?.withTintColor(.black, renderingMode: .alwaysOriginal) ?? .init(), placeholder: "이름을 입력하세요.")
     
     private let emailTextField = AuthExtensionTextField(icon: UIImage(systemName: "envelope")?.withTintColor(.black, renderingMode: .alwaysOriginal) ?? .init(), placeholder: "E-mail을 입력하세요.")
     
@@ -35,11 +40,11 @@ final class FindPasswordVC: baseVC<FindPasswordReactor>, PanModalPresentable{
     // MARK: - Lifecycle
     override init() {
         super.init()
-        stackView.addArrangeSubviews([nameTextField,emailTextField,findButton])
+        stackView.addArrangeSubviews([nameTextField,emailTextField])
     }
     override init(reactor: FindPasswordReactor) {
         super.init(reactor: reactor)
-        stackView.addArrangeSubviews([nameTextField,emailTextField,findButton])
+        stackView.addArrangeSubviews([nameTextField,emailTextField])
     }
     
     required init?(coder: NSCoder) {
@@ -52,15 +57,28 @@ final class FindPasswordVC: baseVC<FindPasswordReactor>, PanModalPresentable{
         panModalTransition(to: .longForm)
     }
     
+    override func viewDidLayoutSubviews() {
+        logoView.layoutIfNeeded()
+    }
+    
     // MARK: - UI
     override func addView() {
         [
-            stackView
+            logoView, stackView, findButton
         ].forEach{ view.addSubview($0) }
     }
     override func setLayout() {
+        logoView.snp.makeConstraints {
+            $0.leading.trailing.top.equalToSuperview()
+            $0.height.equalTo(bound.height*0.1218)
+        }
         stackView.snp.makeConstraints {
-            $0.center.equalToSuperview()
+            $0.centerY.equalToSuperview()
+            $0.leading.trailing.equalToSuperview().inset(bound.width*0.222)
+        }
+        findButton.snp.makeConstraints {
+            $0.top.equalTo(stackView.snp.bottom).offset(bound.height*0.0484)
+            $0.leading.trailing.equalToSuperview().inset(bound.width*0.3055)
         }
     }
     override func configureVC() {

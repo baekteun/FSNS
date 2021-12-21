@@ -19,6 +19,7 @@ struct MainStepper: Stepper{
 
 final class MainFlow: Flow{
     // MARK: - Properties
+    @Inject var vc: MainVC
     
     var root: Presentable{
         return self.rootVC
@@ -53,8 +54,7 @@ final class MainFlow: Flow{
 // MARK: - Method
 private extension MainFlow{
     func coordinateToMain() -> FlowContributors{
-        let vc = MainVC()
         self.rootVC.pushViewController(vc, animated: true)
-        return .one(flowContributor: .contribute(withNextPresentable: vc, withNextStepper: vc.reactor ?? .init()))
+        return .one(flowContributor: .contribute(withNextPresentable: vc, withNextStepper: vc.reactor))
     }
 }

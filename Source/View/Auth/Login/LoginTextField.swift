@@ -14,10 +14,17 @@ final class LoginTextField: UITextField{
     private let iconImageView = UIImageView()
     
     // MARK: - Init
-    init(icon: UIImage, placeholder: String){
+    init(
+        icon: UIImage,
+        placeholder: String,
+        with placeholderColor: UIColor = .white,
+        underlineColor: UIColor = .white
+    ){
         super.init(frame: .zero)
         self.iconImageView.image = icon
         self.placeholder = placeholder
+        setPlaceholderColor(with: placeholderColor)
+        addUnderline(with: underlineColor)
         addView()
         setLayout()
         configureTextField()
@@ -43,8 +50,8 @@ private extension LoginTextField{
     }
     func configureTextField(){
         leftSapcing(width: 30, height: 25)
-        addUnderline()
+        
         self.font = UIFont(font: FashionFontFamily.Roboto.regular, size: 12)
-        setPlaceholderColor(with: .white)
+        
     }
 }

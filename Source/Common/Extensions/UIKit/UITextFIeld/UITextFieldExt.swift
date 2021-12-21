@@ -21,11 +21,11 @@ extension UITextField{
     }
     func addUnderline(with color: UIColor = .white){
         let line = UIView()
-        line.backgroundColor = .white
+        line.backgroundColor = color
         self.addSubview(line)
         line.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview()
-            $0.bottom.equalToSuperview()
+            $0.top.equalTo(self.snp.bottom).offset(3)
             $0.height.equalTo(1)
         }
     }

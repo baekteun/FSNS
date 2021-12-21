@@ -50,6 +50,8 @@ final class LoginFlow: Flow{
             return .end(forwardToParentFlowWithStep: FashionStep.mainIsRequired)
         case .findPasswordIsRequired:
             return navigateToFindPassword()
+        case .registerIsRequired:
+            return navigateToRegister()
         default:
             return .none
         }
@@ -64,6 +66,11 @@ private extension LoginFlow{
     }
     func navigateToFindPassword() -> FlowContributors{
         let vc = FindPasswordVC()
+        self.rootVC.presentPanModal(vc)
+        return .one(flowContributor: .contribute(withNextPresentable: vc, withNextStepper: vc.reactor))
+    }
+    func navigateToRegister() -> FlowContributors{
+        let vc = RegisterVC()
         self.rootVC.presentPanModal(vc)
         return .one(flowContributor: .contribute(withNextPresentable: vc, withNextStepper: vc.reactor))
     }

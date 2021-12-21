@@ -24,6 +24,8 @@
 		45A6352F49CEE8DF6ED47551 /* baseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0E852077350D2DD16902A8 /* baseTableViewCell.swift */; };
 		46C51AAB9A4387949B608A39 /* UIStackViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D8283C3DE532432FB0875 /* UIStackViewExt.swift */; };
 		46F2BCD127715CB70032CA88 /* LoginExtButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F2BCD027715CB60032CA88 /* LoginExtButton.swift */; };
+		46F2BCD62771688A0032CA88 /* AuthLogoVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F2BCD52771688A0032CA88 /* AuthLogoVIew.swift */; };
+		46F2BCD9277169D00032CA88 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F2BCD8277169D00032CA88 /* UIViewExt.swift */; };
 		489BC41BE647F0F162F352FF /* StepExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF6F74AC23C9C2B4DA1529D /* StepExt.swift */; };
 		4BFA5C836F019921FEB18954 /* Pods_Fashion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6750D27599BBD3A2A8C73EA /* Pods_Fashion.framework */; };
 		4F013C970A3EC7D344217BB0 /* RegisterReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ADEC2440929CCB919B8B87 /* RegisterReactor.swift */; };
@@ -93,6 +95,8 @@
 		4237234F8D3DB301A5D9D73E /* FONTLOG.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = FONTLOG.txt; sourceTree = "<group>"; };
 		428A4A791CFE107AF6075F68 /* AuthExtensionTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthExtensionTextField.swift; sourceTree = "<group>"; };
 		46F2BCD027715CB60032CA88 /* LoginExtButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginExtButton.swift; sourceTree = "<group>"; };
+		46F2BCD52771688A0032CA88 /* AuthLogoVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthLogoVIew.swift; sourceTree = "<group>"; };
+		46F2BCD8277169D00032CA88 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		491AEDF3AB7DEB28DF35D361 /* UITextFieldExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExt.swift; sourceTree = "<group>"; };
 		4B80B531973F956571F1F997 /* baseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baseVC.swift; sourceTree = "<group>"; };
 		4DD295E833A97CFDB8B53441 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -283,6 +287,14 @@
 			path = Flow;
 			sourceTree = "<group>";
 		};
+		46F2BCD7277169C60032CA88 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				46F2BCD8277169D00032CA88 /* UIViewExt.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
 		4B658A28DDCA20AFAD0DB951 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
@@ -410,6 +422,7 @@
 		96BBD0E359F8EA34B48D678C /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				46F2BCD7277169C60032CA88 /* UIView */,
 				C30AFCD2B4624108CD18C458 /* UIButton */,
 				A30D3ADD6D624D715999A85B /* UINavigationController */,
 				B0786914089707E13213CECB /* UIStackView */,
@@ -423,6 +436,7 @@
 			children = (
 				BBDEB3899B7E725EE8D93546 /* FindPassword */,
 				7FAF7298C4FA1A6DB870410A /* Login */,
+				46F2BCD52771688A0032CA88 /* AuthLogoVIew.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -668,6 +682,7 @@
 				AA282C182755645CB8D16D6C /* ContainterReigster.swift in Sources */,
 				0437FD23897159C18F1C3819 /* InjectPropertyWrapper.swift in Sources */,
 				37C303E8A6AFC96ECB05A128 /* SceneDelegate.swift in Sources */,
+				46F2BCD62771688A0032CA88 /* AuthLogoVIew.swift in Sources */,
 				890921CDEE7ED3065B43C025 /* baseCollectionViewCell.swift in Sources */,
 				45A6352F49CEE8DF6ED47551 /* baseTableViewCell.swift in Sources */,
 				E2144776497B28A3E0ADCF4A /* baseVC.swift in Sources */,
@@ -686,6 +701,7 @@
 				1FBE4F0B7FE118846B48148B /* FindPasswordReactor.swift in Sources */,
 				3003BC67ABB1B8B76B73108C /* FindPasswordVC.swift in Sources */,
 				EB54DAB10E7AABD20450A791 /* LoginReactor.swift in Sources */,
+				46F2BCD9277169D00032CA88 /* UIViewExt.swift in Sources */,
 				F23931869CE7603DB71C751D /* LoginVC.swift in Sources */,
 				4F013C970A3EC7D344217BB0 /* RegisterReactor.swift in Sources */,
 				A94FB44F030671AE8417169D /* RegisterVC.swift in Sources */,

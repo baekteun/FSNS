@@ -42,6 +42,7 @@ private extension AuthExtensionTextField{
     }
     func configureTextField(){
         self.addUnderline(with: .black)
+        self.font = UIFont(font: FashionFontFamily.Roboto.regular, size: 12)
         self.textAlignment = .center
     }
 }
