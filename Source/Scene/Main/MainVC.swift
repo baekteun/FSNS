@@ -15,7 +15,6 @@ import SnapKit
 final class MainVC: baseVC<MainReactor>{
     
     // MARK: - Properties
-    
     private let sideBarButton = UIBarButtonItem().then {
         $0.image = UIImage(systemName: "line.3.horizontal")?.withTintColor(.white, renderingMode: .alwaysOriginal)
     }
@@ -43,7 +42,6 @@ final class MainVC: baseVC<MainReactor>{
     
     
     // MARK: - Reactor
-    
     override func bindView(reactor: MainReactor) {
         sideBarButton.rx.tap
             .map{ Reactor.Action.sideButtonDidTap }

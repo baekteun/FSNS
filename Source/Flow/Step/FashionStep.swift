@@ -12,6 +12,8 @@ enum FashionStep: Step{
     // Global
     case alert(title: String?, message: String?)
     case dismiss
+    case sideButtonDidTap
+    case profileButtonDidTap
     
     // Auth
     case loginIsRequired
