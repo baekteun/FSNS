@@ -22,6 +22,7 @@
 		37C303E8A6AFC96ECB05A128 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABFE28CF06FA6D31614292F /* SceneDelegate.swift */; };
 		4509A6A37742C69929204104 /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EA0BB42F5E68A9904B1B95 /* LoginTextField.swift */; };
 		45A6352F49CEE8DF6ED47551 /* baseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0E852077350D2DD16902A8 /* baseTableViewCell.swift */; };
+		46035583277194B4002AC76F /* MainPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46035582277194B4002AC76F /* MainPageCell.swift */; };
 		46C51AAB9A4387949B608A39 /* UIStackViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D8283C3DE532432FB0875 /* UIStackViewExt.swift */; };
 		46F2BCD127715CB70032CA88 /* LoginExtButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F2BCD027715CB60032CA88 /* LoginExtButton.swift */; };
 		46F2BCD62771688A0032CA88 /* AuthLogoVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F2BCD52771688A0032CA88 /* AuthLogoVIew.swift */; };
@@ -47,7 +48,6 @@
 		A94FB44F030671AE8417169D /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF0D8EBF6065F090C6C9A5D /* RegisterVC.swift */; };
 		AA282C182755645CB8D16D6C /* ContainterReigster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8F1790ADBF2D4C1BF7EAF /* ContainterReigster.swift */; };
 		AE39D36BDB99FBB613D56B10 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DD295E833A97CFDB8B53441 /* Roboto-Regular.ttf */; };
-		CF072AEB6F2594601FE2660A /* FashionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE1486518EEE0B75FC5D3D1 /* FashionModel.swift */; };
 		CF6CE6B0F382679A5D326339 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62B485427D7D4DA84C07EC96 /* Roboto-MediumItalic.ttf */; };
 		D3C2F17E646AB9428D494D17 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 201480CC301EFEE655C0FC34 /* OFL.txt */; };
 		E1CCFE9F04CBA3CD27976696 /* UINavigationItemExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A73125854EE04855CA0894 /* UINavigationItemExt.swift */; };
@@ -82,7 +82,6 @@
 		02DFE66A8EB73C310F407A98 /* baseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baseCollectionViewCell.swift; sourceTree = "<group>"; };
 		03F48745093407320E5BA5AE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06716981517809E990E81D0B /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
-		0BE1486518EEE0B75FC5D3D1 /* FashionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FashionModel.swift; sourceTree = "<group>"; };
 		15244FC8918A8DA2C3128C10 /* LoginFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFlow.swift; sourceTree = "<group>"; };
 		1A421D4F58FED2C9632C4087 /* FindPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPasswordVC.swift; sourceTree = "<group>"; };
 		1E1AD80C4D33E44E193C14A1 /* UIButtonExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExt.swift; sourceTree = "<group>"; };
@@ -94,6 +93,7 @@
 		3895A147C93F33762A52EBB5 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		4237234F8D3DB301A5D9D73E /* FONTLOG.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = FONTLOG.txt; sourceTree = "<group>"; };
 		428A4A791CFE107AF6075F68 /* AuthExtensionTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthExtensionTextField.swift; sourceTree = "<group>"; };
+		46035582277194B4002AC76F /* MainPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageCell.swift; sourceTree = "<group>"; };
 		46F2BCD027715CB60032CA88 /* LoginExtButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginExtButton.swift; sourceTree = "<group>"; };
 		46F2BCD52771688A0032CA88 /* AuthLogoVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthLogoVIew.swift; sourceTree = "<group>"; };
 		46F2BCD8277169D00032CA88 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
@@ -287,6 +287,22 @@
 			path = Flow;
 			sourceTree = "<group>";
 		};
+		4603558027719475002AC76F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				460355812771949D002AC76F /* Cell */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		460355812771949D002AC76F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				46035582277194B4002AC76F /* MainPageCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		46F2BCD7277169C60032CA88 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
@@ -324,7 +340,6 @@
 		4FFDA680A860379396F30A61 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0BE1486518EEE0B75FC5D3D1 /* FashionModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -536,6 +551,7 @@
 		F0F5A275C82D1F534B03EB88 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4603558027719475002AC76F /* Main */,
 				9FD38F8D92CBB8041AF38EDD /* Auth */,
 				329BEAB942E745BA85CC7274 /* Main */,
 			);
@@ -683,6 +699,7 @@
 				0437FD23897159C18F1C3819 /* InjectPropertyWrapper.swift in Sources */,
 				37C303E8A6AFC96ECB05A128 /* SceneDelegate.swift in Sources */,
 				46F2BCD62771688A0032CA88 /* AuthLogoVIew.swift in Sources */,
+				46035583277194B4002AC76F /* MainPageCell.swift in Sources */,
 				890921CDEE7ED3065B43C025 /* baseCollectionViewCell.swift in Sources */,
 				45A6352F49CEE8DF6ED47551 /* baseTableViewCell.swift in Sources */,
 				E2144776497B28A3E0ADCF4A /* baseVC.swift in Sources */,
@@ -692,7 +709,6 @@
 				E1CCFE9F04CBA3CD27976696 /* UINavigationItemExt.swift in Sources */,
 				46C51AAB9A4387949B608A39 /* UIStackViewExt.swift in Sources */,
 				5FE2F26601BDCB426159054B /* UITextFieldExt.swift in Sources */,
-				CF072AEB6F2594601FE2660A /* FashionModel.swift in Sources */,
 				336FFA3B079A9BC7367E2728 /* AppFlow.swift in Sources */,
 				226BED92CC4C23D23CCA3F9A /* LoginFlow.swift in Sources */,
 				742B7A7B4BF33C65B0418F3F /* MainFlow.swift in Sources */,
