@@ -19,8 +19,7 @@ final class MainReactor: Reactor, Stepper{
     
     // MARK: - Reactor
     enum Action{
-        case sideButtonDidTap
-        case profileDidTap
+        
     }
     enum Mutation{
     }
@@ -35,11 +34,8 @@ final class MainReactor: Reactor, Stepper{
 extension MainReactor{
     func mutate(action: Action) -> Observable<Mutation> {
         switch action{
-        case .sideButtonDidTap:
-            // present sidebar
-            return .empty()
-        case .profileDidTap:
-            // present profileVC
+            
+        default:
             return .empty()
         }
     }

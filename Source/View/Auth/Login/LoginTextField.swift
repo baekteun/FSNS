@@ -17,8 +17,8 @@ final class LoginTextField: UITextField{
     init(
         icon: UIImage,
         placeholder: String,
-        with placeholderColor: UIColor = .white,
-        underlineColor: UIColor = .white
+        with placeholderColor: UIColor = UIColor(red: 0.363, green: 0.363, blue: 0.363, alpha: 1),
+        underlineColor: UIColor = .black
     ){
         super.init(frame: .zero)
         self.iconImageView.image = icon
@@ -51,7 +51,7 @@ private extension LoginTextField{
     func configureTextField(){
         leftSapcing(width: 30, height: 25)
         
-        self.font = UIFont(font: FashionFontFamily.Roboto.regular, size: 12)
+        self.font = UIFont(font: FashionFontFamily.Cafe24Ssurround.bold, size: 12)
         
     }
 }

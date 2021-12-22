@@ -8,10 +8,14 @@
 
 import UIKit
 import SnapKit
+import Then
 
 final class AuthLogoView: UIView{
     // MARK: - Properties
-    private let titleLabel = UILabel()
+    private let titleLabel = UILabel().then {
+        $0.font = UIFont(font: FashionFontFamily.Cafe24Ssurround.bold, size: 30)
+        $0.textColor = .white
+    }
     
     init(title: String){
         super.init(frame: .zero)
@@ -23,7 +27,6 @@ final class AuthLogoView: UIView{
         fatalError("init(coder:) has not been implemented")
     }
     override func layoutIfNeeded() {
-        setGradient()
         addView()
         setLayout()
         configureView()
@@ -41,17 +44,6 @@ private extension AuthLogoView{
         }
     }
     func configureView(){
-        
-        self.titleLabel.font = UIFont(font: FashionFontFamily.Roboto.regular, size: 30)
-        self.titleLabel.textColor = .white
-    }
-    func setGradient(){
-        self.addGradient(with: [
-            UIColor(red: 0.792, green: 0.588, blue: 0.949, alpha: 1).cgColor,
-            UIColor(red: 0.655, green: 0.635, blue: 0.961, alpha: 1).cgColor,
-            UIColor(red: 0.62, green: 0.824, blue: 0.937, alpha: 1).cgColor
-        ], locations: [
-            0, 0.49, 1
-        ])
+        self.backgroundColor = .black
     }
 }

@@ -8,9 +8,11 @@
 
 import UIKit
 import SnapKit
+import RxSwift
+import RxCocoa
+import Kingfisher
 
 extension UINavigationController{
-    
     func configGradientBar(
         colors: [CGColor],
         locations: [NSNumber],
@@ -54,16 +56,39 @@ extension UINavigationController{
 }
 
 extension UINavigationItem{
-    func configureNavigationItem(){
-        let barAppearance = UINavigationBarAppearance()
-        barAppearance.backgroundColor = FashionAsset.fashionMaincolor.color
-        
-        
-        
+    func configTitleView() -> Observable<Void> {
+        let button = UIButton()
+        button.setTitle("F", for: .normal)
+        button.titleLabel?.font = UIFont(font: FashionFontFamily.Supermercado.regular, size: 30)
+        self.titleView = button
+        return button.rx.tap.asObservable()
+    }
+    func configProfileButton() -> Observable<Void>{
+        let button = UIButton()
+        button.widthAnchor.constraint(equalToConstant: 20).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        button.contentMode = .scaleAspectFit
+        if let url = UserDefaults.standard.string(forKey: "PROFILE"),
+           url.isEmpty == false{
+            button.kf.setImage(with: URL(string: url) ?? .none,
+                               for: .normal,
+                               placeholder: nil,
+                               options: [.cacheMemoryOnly])
+        }else{
+            button.setImage(FashionAsset.fashionDefaultProfile.image, for: .normal)
+        }
+        let item = UIBarButtonItem(customView: button)
+        self.rightBarButtonItem = item
+        return item.rx.tap.asObservable()
+    }
+    func configureLogButton() -> Observable<Void>{
+        let button = UIButton()
+        button.setTitle("Log out", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        self.leftBarButtonItem = .init(customView: button)
+        return button.rx.tap.asObservable()
     }
 }
 
 extension UINavigationBar{
-    
-    
 }

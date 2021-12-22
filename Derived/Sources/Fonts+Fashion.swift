@@ -16,6 +16,10 @@
 
 // swiftlint:disable identifier_name line_length type_body_length
 public enum FashionFontFamily {
+  public enum Cafe24Ssurround {
+    public static let bold = FashionFontConvertible(name: "Cafe24Ssurround", family: "Cafe24 Ssurround", path: "Cafe24Ssurround.ttf")
+    public static let all: [FashionFontConvertible] = [bold]
+  }
   public enum Roboto {
     public static let black = FashionFontConvertible(name: "Roboto-Black", family: "Roboto", path: "Roboto-Black.ttf")
     public static let blackItalic = FashionFontConvertible(name: "Roboto-BlackItalic", family: "Roboto", path: "Roboto-BlackItalic.ttf")
@@ -35,7 +39,7 @@ public enum FashionFontFamily {
     public static let regular = FashionFontConvertible(name: "Supermercado-Regular", family: "Supermercado", path: "SupermercadoOne-Regular.ttf")
     public static let all: [FashionFontConvertible] = [regular]
   }
-  public static let allCustomFonts: [FashionFontConvertible] = [Roboto.all, Supermercado.all].flatMap { $0 }
+  public static let allCustomFonts: [FashionFontConvertible] = [Cafe24Ssurround.all, Roboto.all, Supermercado.all].flatMap { $0 }
   public static func registerAllCustomFonts() {
     allCustomFonts.forEach { $0.register() }
   }

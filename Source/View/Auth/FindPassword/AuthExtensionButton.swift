@@ -16,6 +16,7 @@ final class AuthExtensionButton: UIButton{
         super.init(frame: .zero)
         self.setTitle(title, for: .normal)
         self.setTitleColor(.black, for: .normal)
+        self.titleLabel?.font = UIFont(font: FashionFontFamily.Cafe24Ssurround.bold, size: 12)
         configureButton()
     }
     

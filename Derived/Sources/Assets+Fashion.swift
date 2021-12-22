@@ -20,6 +20,7 @@ public enum FashionAsset {
   public static let accentColor = FashionColors(name: "AccentColor")
   public static let fashionDummyOne = FashionImages(name: "FASHION_DUMMY_ONE")
   public static let fashionDummyTwo = FashionImages(name: "FASHION_DUMMY_TWO")
+  public static let fashionDefaultProfile = FashionImages(name: "FASHION_DefaultProfile")
   public static let fashionMaincolor = FashionColors(name: "FASHION_MAINCOLOR")
   public static let fashionSplash = FashionImages(name: "FASHION_SPLASH")
 }

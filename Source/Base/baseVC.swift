@@ -47,9 +47,7 @@ class baseVC<T: Reactor & Stepper>: UIViewController{
     
     func addView(){}
     func setLayout(){}
-    func configureVC(){
-        self.navigationItem.configureNavigationItem()
-    }
+    func configureVC(){}
     func configureWillAppear(){}
     
     func bindView(reactor: T){}

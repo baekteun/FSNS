@@ -9,9 +9,10 @@
 import UIKit
 
 final class LoginExtButton: UIButton{
-    init(title: String, backgroundColor: UIColor = .white){
+    init(title: String, backgroundColor: UIColor = .white, textColor: UIColor = .black){
         super.init(frame: .zero)
         self.setTitle(title, for: .normal)
+        self.setTitleColor(textColor, for: .normal)
         self.backgroundColor = backgroundColor
         configureButton()
     }
@@ -19,13 +20,15 @@ final class LoginExtButton: UIButton{
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
 }
 
 
 private extension LoginExtButton{
     func configureButton(){
-        self.setTitleColor(.black, for: .normal)
-        self.layer.cornerRadius = 10
-        self.titleLabel?.font = UIFont(font: FashionFontFamily.Roboto.regular, size: 15)
+        self.layer.cornerRadius = 15
+        self.layer.borderWidth = 2
+        self.layer.borderColor = UIColor.black.cgColor
+        self.titleLabel?.font = UIFont(font: FashionFontFamily.Cafe24Ssurround.bold, size: 14)
     }
 }
