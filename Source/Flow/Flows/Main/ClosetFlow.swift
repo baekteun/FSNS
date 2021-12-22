@@ -38,7 +38,8 @@ final class ClosetFlow: Flow{
         guard let step = step.asFashionStep else { return .none }
         
         switch step{
-            
+        case .closetIsRequired:
+            return coordinateToCloset()
         default:
             return .none
         }
@@ -47,5 +48,8 @@ final class ClosetFlow: Flow{
 
 // MARK: - Method
 private extension ClosetFlow{
-    
+    func coordinateToCloset() -> FlowContributors{
+        self.rootVC.setViewControllers([vc], animated: true)
+        return .one(flowContributor: .contribute(withNextPresentable: vc, withNextStepper: vc.reactor))
+    }
 }

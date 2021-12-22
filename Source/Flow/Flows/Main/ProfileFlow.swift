@@ -30,6 +30,8 @@ final class ProfileFlow: Flow{
         guard let step = step.asFashionStep else { return .none }
         
         switch step{
+        case .profileIsRequired:
+            return coordinateToProfile()
         default:
             return .none
         }
@@ -38,5 +40,8 @@ final class ProfileFlow: Flow{
 
 // MARK: - Method
 private extension ProfileFlow{
-    
+    func coordinateToProfile() -> FlowContributors{
+        self.rootVC.setViewControllers([vc], animated: true)
+        return .one(flowContributor: .contribute(withNextPresentable: vc, withNextStepper: vc.reactor))
+    }
 }

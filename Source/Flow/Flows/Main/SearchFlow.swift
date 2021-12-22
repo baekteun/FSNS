@@ -30,7 +30,8 @@ final class SearchFlow: Flow{
         guard let step = step.asFashionStep else { return .none }
         
         switch step{
-            
+        case .searchIsRequired:
+            return coordinateToSearch()
         default:
             return .none
         }
@@ -39,5 +40,8 @@ final class SearchFlow: Flow{
 
 // MARK: - Method
 private extension SearchFlow{
-    
+    func coordinateToSearch() -> FlowContributors{
+        self.rootVC.setViewControllers([vc], animated: true)
+        return .one(flowContributor: .contribute(withNextPresentable: vc, withNextStepper: vc.reactor))
+    }
 }
