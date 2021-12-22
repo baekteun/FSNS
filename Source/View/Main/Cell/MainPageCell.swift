@@ -39,14 +39,25 @@ final class MainPageCell: baseCollectionViewCell<MainPageModel>{
     
     private let bookMarkButton = UIButton()
     
-    private let evaluationLabel = UILabel()
+    private let hanggerdLabel = UILabel()
+    
+    private let evaluationCountLabel = UILabel()
+    
+    private let commentCountLabel = UILabel()
+    
+    private let commentTableView = UITableView().then {
+        $0.register(CommentCell.self, forCellReuseIdentifier: CommentCell.reusableID)
+    }
+    
+    private let moreButton = UIButton()
     
     // MARK: - UI
     override func addView() {
         iconStackView.addArrangeSubviews([hangerButton, starButton, commentButton])
         [
             userProfileImageView, userNameLabel, tagLabel, postImageView,
-            iconStackView, lineView, bookMarkButton, evaluationLabel
+            iconStackView, lineView, bookMarkButton, evaluationCountLabel, hanggerdLabel,
+            commentTableView, moreButton, commentCountLabel
         ].forEach{ addSubview($0) }
     }
     override func setLayout() {
@@ -74,10 +85,32 @@ final class MainPageCell: baseCollectionViewCell<MainPageModel>{
             $0.leading.equalTo(postImageView.snp.leading)
             $0.top.equalTo(postImageView.snp.bottom).offset(5)
         }
+        bookMarkButton.snp.makeConstraints {
+            $0.trailing.equalTo(postImageView.snp.trailing)
+            $0.top.equalTo(postImageView.snp.bottom).offset(5)
+        }
         lineView.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(1)
             $0.top.equalTo(iconStackView.snp.bottom).offset(20)
+        }
+        hanggerdLabel.snp.makeConstraints {
+            $0.leading.equalTo(iconStackView.snp.leading)
+            $0.top.equalTo(iconStackView.snp.bottom).offset(5)
+        }
+        moreButton.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview()
+            $0.bottom.equalToSuperview()
+            $0.height.equalTo(14)
+        }
+        commentTableView.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview()
+            $0.top.equalTo(hanggerdLabel.snp.bottom).offset(bound.height*0.0468)
+            $0.bottom.equalTo(moreButton.snp.top)
+        }
+        commentCountLabel.snp.makeConstraints {
+            $0.leading.equalTo(hanggerdLabel.snp.leading)
+            $0.bottom.equalTo(commentTableView.snp.top)
         }
     }
     override func configureCell() {

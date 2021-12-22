@@ -32,9 +32,9 @@ final class LoginVC: baseVC<LoginReactor>{
     }
     
     private let findIdOrPasswordButton = UIButton().then {
-        $0.setTitle("아이디 찾기 | 비밀번호 찾기", for: .normal)
+        $0.setTitle("아이디/비밀번호 찾기", for: .normal)
         $0.setTitleColor(.black, for: .normal)
-        $0.titleLabel?.font = UIFont(font: FashionFontFamily.Supermercado.regular, size: 11)
+        $0.titleLabel?.font = UIFont(font: FashionFontFamily.Cafe24Ssurround.bold, size: 11)
         $0.addUnderline()
     }
     

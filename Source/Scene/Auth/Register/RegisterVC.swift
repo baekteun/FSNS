@@ -27,7 +27,7 @@ final class RegisterVC: baseVC<RegisterReactor>, PanModalPresentable{
     }
     private let logoView = AuthLogoView(title: "회원가입")
     
-    private let nameTextField = AuthExtensionTextField(icon: UIImage(systemName: "person")?.withTintColor(.black, renderingMode: .alwaysOriginal) ?? .init(), placeholder: "이름을 입력하세요.")
+    private let nameTextField = AuthExtensionTextField(icon: UIImage(systemName: "person.fill")?.withTintColor(.black, renderingMode: .alwaysOriginal) ?? .init(), placeholder: "이름을 입력하세요.")
     
     private let emailTextField = AuthExtensionTextField(icon: UIImage(systemName: "envelope")?.withTintColor(.black, renderingMode: .alwaysOriginal) ?? .init(), placeholder: "E-mail을 입력하세요.")
     

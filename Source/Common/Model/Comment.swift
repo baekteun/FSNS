@@ -10,4 +10,5 @@ struct Comment{
     let userName: String
     let profileImageUrl: String
     let starCount: Int
+    let content: String
 }

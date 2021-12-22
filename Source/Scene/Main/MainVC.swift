@@ -26,16 +26,9 @@ final class MainVC: baseVC<MainReactor>{
     }
     override func configureVC() {
         super.configureVC()
-        self.navigationController?.configGradientBar(colors: [
-            UIColor(red: 0.792, green: 0.588, blue: 0.949, alpha: 1).cgColor,
-            UIColor(red: 0.655, green: 0.635, blue: 0.961, alpha: 1).cgColor,
-            UIColor(red: 0.62, green: 0.824, blue: 0.937, alpha: 1).cgColor
-        ], locations: [
-            0, 0.54, 1
-        ])
+        self.navigationController?.configureNavigationColor()
         self.navigationItem.configTitleView()
         self.navigationItem.configProfileButton()
-        self.navigationItem.configureLogButton()
     }
     
     

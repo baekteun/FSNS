@@ -13,6 +13,13 @@ import RxCocoa
 import Kingfisher
 
 extension UINavigationController{
+    func configureNavigationColor() {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = .black
+        navigationBar.standardAppearance = appearance
+        navigationBar.scrollEdgeAppearance = navigationBar.standardAppearance
+    }
     func configGradientBar(
         colors: [CGColor],
         locations: [NSNumber],
@@ -81,7 +88,7 @@ extension UINavigationItem{
         self.rightBarButtonItem = item
         return item.rx.tap.asObservable()
     }
-    func configureLogButton() -> Observable<Void>{
+    func configureLogoutButton() -> Observable<Void>{
         let button = UIButton()
         button.setTitle("Log out", for: .normal)
         button.setTitleColor(.white, for: .normal)
