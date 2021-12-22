@@ -24,4 +24,7 @@ enum FashionStep: Step{
     // Main
     case mainTabbarIsRequired
     case mainIsRequired
+    case closetIsRequired
+    case profileIsRequired
+    case searchIsRequired
 }

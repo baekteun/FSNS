@@ -22,6 +22,9 @@ extension Container{
         autoregister(RegisterVC.self, initializer: RegisterVC.init)
         autoregister(FindPasswordVC.self, initializer: FindPasswordVC.init)
         autoregister(MainVC.self, initializer: MainVC.init)
+        autoregister(ClosetVC.self, initializer: ClosetVC.init)
+        autoregister(ProfileVC.self, initializer: ProfileVC.init)
+        autoregister(SearchVC.self, initializer: SearchVC.init)
     }
     func registerReactor(){
         // VC's
@@ -29,6 +32,9 @@ extension Container{
         autoregister(RegisterReactor.self, initializer: RegisterReactor.init)
         autoregister(FindPasswordReactor.self, initializer: FindPasswordReactor.init)
         autoregister(MainReactor.self, initializer: MainReactor.init)
+        autoregister(ClosetReactor.self, initializer: ClosetReactor.init)
+        autoregister(ProfileReactor.self, initializer: ProfileReactor.init)
+        autoregister(SearchReactor.self, initializer: SearchReactor.init)
         
         // Cell's
         autoregister(MainPageCellReactor.self, initializer: MainPageCellReactor.init)
@@ -37,10 +43,12 @@ extension Container{
     func registerStepper(){
         autoregister(LoginStepper.self, initializer: LoginStepper.init)
         autoregister(MainStepper.self, initializer: MainStepper.init)
+        autoregister(ClosetStepper.self, initializer: ClosetStepper.init)
     }
     
     func registerFlow(){
         autoregister(LoginFlow.self, initializer: LoginFlow.init)
         autoregister(MainFlow.self, initializer: MainFlow.init)
+        autoregister(ClosetFlow.self, initializer: ClosetFlow.init)
     }
 }
