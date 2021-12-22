@@ -6,6 +6,9 @@
 //  Copyright © 2021 baegteun. All rights reserved.
 //
 
+import Differentiator
+
+
 struct MainPageModel{
     let userProfileImageUrl: String
     let userName: String
@@ -15,3 +18,11 @@ struct MainPageModel{
     let commentCount: Int
     let comments: [Comment]
 }
+
+extension MainPageModel: Equatable{
+    static func == (lhs: MainPageModel, rhs: MainPageModel) -> Bool {
+        return false
+    }
+}
+
+

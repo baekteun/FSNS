@@ -11,20 +11,29 @@ import SnapKit
 import Then
 import Kingfisher
 import RxSwift
+import ReactorKit
+import RxDataSources
 
 final class MainPageCell: baseCollectionViewCell<MainPageModel>{
     // MARK: - Properties
-    private let userProfileImageView = UIImageView()
+    private let userProfileImageView = UIImageView().then {
+        $0.layer.cornerRadius = 10
+        $0.clipsToBounds = true
+    }
     
     private let userNameLabel = UILabel()
     
     private let tagLabel = UILabel()
     
-    private let postImageView = UIImageView()
+    private let postImageView = UIImageView().then {
+        $0.layer.cornerRadius = 20
+        $0.clipsToBounds = true
+    }
     
     
     private let hangerButton = UIButton().then {
         $0.setImage(FashionAsset.fashionHanger.image, for: .normal)
+        $0.contentMode = .scaleAspectFit
     }
     
     private let starButton = UIButton().then {
@@ -53,13 +62,8 @@ final class MainPageCell: baseCollectionViewCell<MainPageModel>{
     
     private let evaluationCountLabel = UILabel()
     
-    private let commentCountLabel = UILabel()
+    private let descriptionLabel = UILabel()
     
-    private let commentTableView = UITableView().then {
-        $0.register(CommentCell.self, forCellReuseIdentifier: CommentCell.reusableID)
-    }
-    
-    private let moreButton = UIButton()
     
     // MARK: - UI
     override func addView() {
@@ -67,7 +71,7 @@ final class MainPageCell: baseCollectionViewCell<MainPageModel>{
         [
             userProfileImageView, userNameLabel, tagLabel, postImageView,
             iconStackView, lineView, bookMarkButton, evaluationCountLabel, hanggerdLabel,
-            commentTableView, moreButton, commentCountLabel
+            descriptionLabel
         ].forEach{ addSubview($0) }
     }
     override func setLayout() {
@@ -80,20 +84,18 @@ final class MainPageCell: baseCollectionViewCell<MainPageModel>{
         userProfileImageView.snp.makeConstraints {
             $0.width.height.equalTo(20)
             $0.leading.equalTo(postImageView.snp.leading)
-            $0.bottom.equalTo(postImageView.snp.top).inset(5)
+            $0.bottom.equalTo(postImageView.snp.top)
         }
         userNameLabel.snp.makeConstraints {
             $0.centerY.equalTo(userProfileImageView)
             $0.leading.equalTo(userProfileImageView.snp.trailing).offset(10)
         }
-        tagLabel.snp.makeConstraints {
-            $0.leading.equalTo(userNameLabel.snp.trailing).offset(2)
-            $0.trailing.equalTo(postImageView.snp.trailing)
-            $0.bottom.equalTo(postImageView.snp.top).inset(5)
-        }
         iconStackView.snp.makeConstraints {
             $0.leading.equalTo(postImageView.snp.leading)
             $0.top.equalTo(postImageView.snp.bottom).offset(5)
+        }
+        hangerButton.snp.makeConstraints {
+            $0.width.height.equalTo(starButton)
         }
         bookMarkButton.snp.makeConstraints {
             $0.trailing.equalTo(postImageView.snp.trailing)
@@ -108,33 +110,30 @@ final class MainPageCell: baseCollectionViewCell<MainPageModel>{
             $0.leading.equalTo(iconStackView.snp.leading)
             $0.top.equalTo(iconStackView.snp.bottom).offset(5)
         }
-        moreButton.snp.makeConstraints {
-            $0.leading.trailing.equalToSuperview()
-            $0.bottom.equalToSuperview()
-            $0.height.equalTo(14)
+        descriptionLabel.snp.makeConstraints {
+            $0.leading.trailing.equalTo(postImageView)
+            $0.top.equalTo(hanggerdLabel.snp.bottom).offset(20)
+            $0.bottom.equalToSuperview().inset(bound.height*0.1031)
         }
-        commentTableView.snp.makeConstraints {
-            $0.leading.trailing.equalToSuperview()
-            $0.top.equalTo(hanggerdLabel.snp.bottom).offset(bound.height*0.0468)
-            $0.bottom.equalTo(moreButton.snp.top)
-        }
-        commentCountLabel.snp.makeConstraints {
-            $0.leading.equalTo(hanggerdLabel.snp.leading)
-            $0.bottom.equalTo(commentTableView.snp.top)
+        tagLabel.snp.makeConstraints {
+            $0.leading.trailing.equalTo(descriptionLabel)
+            $0.bottom.equalToSuperview().inset(bound.height*0.0531)
         }
     }
+    
     override func configureCell() {
-        self.layer.borderColor = UIColor.black.cgColor
-        self.layer.borderWidth = 1
+        self.backgroundColor = .white
     }
     
     override func bind(_ model: MainPageModel) {
         postImageView.kf.setImage(with: URL(string: model.postImageUrl)!,
                                   placeholder: nil,
                                   options: [])
+        
         userProfileImageView.kf.setImage(with: URL(string: model.userProfileImageUrl)!,
                                          placeholder: nil,
                                          options: [])
+        
         userNameLabel.text = model.userName
         
         let tags = model.tag.reduce(into: "") { partialResult, str in
@@ -144,13 +143,10 @@ final class MainPageCell: baseCollectionViewCell<MainPageModel>{
         
         hanggerdLabel.text = "옷걸이 \(model.hanggerdCount)개"
         
-        commentCountLabel.text = "평가 \(model.commentCount)개"
         
-        Observable.just(model.comments)
-            .bind(to: commentTableView.rx.items(cellIdentifier: CommentCell.reusableID, cellType: CommentCell.self)) { _, element, cell in
-                cell.model = element
-            }
-            .disposed(by: disposeBag)
+        
+        
     }
     
 }
+

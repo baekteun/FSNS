@@ -13,6 +13,8 @@ extension Container{
     func registerDependencies(){
         registerVC()
         registerReactor()
+        registerStepper()
+        registerFlow()
     }
     
     func registerVC(){
@@ -22,9 +24,23 @@ extension Container{
         autoregister(MainVC.self, initializer: MainVC.init)
     }
     func registerReactor(){
+        // VC's
         autoregister(LoginReactor.self, initializer: LoginReactor.init)
         autoregister(RegisterReactor.self, initializer: RegisterReactor.init)
         autoregister(FindPasswordReactor.self, initializer: FindPasswordReactor.init)
         autoregister(MainReactor.self, initializer: MainReactor.init)
+        
+        // Cell's
+        autoregister(MainPageCellReactor.self, initializer: MainPageCellReactor.init)
+    }
+    
+    func registerStepper(){
+        autoregister(LoginStepper.self, initializer: LoginStepper.init)
+        autoregister(MainStepper.self, initializer: MainStepper.init)
+    }
+    
+    func registerFlow(){
+        autoregister(LoginFlow.self, initializer: LoginFlow.init)
+        autoregister(MainFlow.self, initializer: MainFlow.init)
     }
 }

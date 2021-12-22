@@ -20,21 +20,17 @@ struct LoginStepper: Stepper{
 
 final class LoginFlow: Flow{
     // MARK: - Properties
-    @Inject var vc: LoginVC
+    @Inject private var vc: LoginVC
     
     var root: Presentable{
         return self.rootVC
     }
     
-    let stepper: LoginStepper
+    @Inject var stepper: LoginStepper
     private let rootVC = UINavigationController()
     
     // MARK: - Init
-    init(
-        with stepper: LoginStepper
-    ){
-        self.stepper = stepper
-    }
+    init(){}
     
     deinit {
         print("\(type(of: self)): \(#function)")
@@ -47,7 +43,7 @@ final class LoginFlow: Flow{
         case .loginIsRequired:
             return coordinateToLogin()
         case .mainIsRequired:
-            return .end(forwardToParentFlowWithStep: FashionStep.mainIsRequired)
+            return .end(forwardToParentFlowWithStep: FashionStep.mainTabbarIsRequired)
         case .findPasswordIsRequired:
             return navigateToFindPassword()
         case .registerIsRequired:

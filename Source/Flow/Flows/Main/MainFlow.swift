@@ -19,21 +19,17 @@ struct MainStepper: Stepper{
 
 final class MainFlow: Flow{
     // MARK: - Properties
-    @Inject var vc: MainVC
+    @Inject private var vc: MainVC
     
     var root: Presentable{
         return self.rootVC
     }
     
-    let stepper: MainStepper
+    @Inject var stepper: MainStepper
     private let rootVC = UINavigationController()
     
     // MARK: - Init
-    init(
-        with stepper: MainStepper
-    ){
-        self.stepper = stepper
-    }
+    init(){}
     
     deinit {
         print("\(type(of: self)): \(#function)")

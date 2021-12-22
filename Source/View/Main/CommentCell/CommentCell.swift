@@ -10,10 +10,14 @@ import UIKit
 import SnapKit
 import Cosmos
 import Kingfisher
+import Then
 
 final class CommentCell: baseTableViewCell<Comment>{
     // MARK: - Properties
-    private let profileImageView = UIImageView()
+    private let profileImageView = UIImageView().then {
+        $0.layer.cornerRadius = 15
+        $0.clipsToBounds = true
+    }
     
     private let usernameLabel = UILabel()
     
@@ -42,7 +46,7 @@ final class CommentCell: baseTableViewCell<Comment>{
             $0.leading.equalTo(usernameLabel.snp.leading)
         }
         contentLabel.snp.makeConstraints {
-            $0.top.equalTo(profileImageView.snp.bottom).inset(4)
+            $0.top.equalTo(profileImageView.snp.bottom).offset(10)
             $0.leading.equalTo(profileImageView.snp.leading)
         }
     }
