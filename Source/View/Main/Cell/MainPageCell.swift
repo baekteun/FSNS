@@ -9,6 +9,8 @@
 import UIKit
 import SnapKit
 import Then
+import Kingfisher
+import RxSwift
 
 final class MainPageCell: baseCollectionViewCell<MainPageModel>{
     // MARK: - Properties
@@ -21,11 +23,17 @@ final class MainPageCell: baseCollectionViewCell<MainPageModel>{
     private let postImageView = UIImageView()
     
     
-    private let hangerButton = UIButton()
+    private let hangerButton = UIButton().then {
+        $0.setImage(FashionAsset.fashionHanger.image, for: .normal)
+    }
     
-    private let starButton = UIButton()
+    private let starButton = UIButton().then {
+        $0.setImage(UIImage(systemName: "star")?.withTintColor(.black, renderingMode: .alwaysOriginal), for: .normal)
+    }
     
-    private let commentButton = UIButton()
+    private let commentButton = UIButton().then {
+        $0.setImage(UIImage(systemName: "bubble.left")?.withTintColor(.black, renderingMode: .alwaysOriginal), for: .normal)
+    }
     
     private let iconStackView = UIStackView().then {
         $0.axis = .horizontal
@@ -37,7 +45,9 @@ final class MainPageCell: baseCollectionViewCell<MainPageModel>{
         $0.backgroundColor = .gray
     }
     
-    private let bookMarkButton = UIButton()
+    private let bookMarkButton = UIButton().then {
+        $0.setImage(UIImage(systemName: "bookmark")?.withTintColor(.black, renderingMode: .alwaysOriginal), for: .normal)
+    }
     
     private let hanggerdLabel = UILabel()
     
@@ -64,8 +74,8 @@ final class MainPageCell: baseCollectionViewCell<MainPageModel>{
         postImageView.snp.makeConstraints {
             $0.top.equalToSuperview().offset(bound.height*0.0593)
             $0.centerX.equalToSuperview()
-            $0.width.lessThanOrEqualTo(bound.width*0.8222)
-            $0.height.lessThanOrEqualTo(bound.height*0.46875)
+            $0.width.equalTo(bound.width*0.8222)
+            $0.height.equalTo(bound.height*0.46875)
         }
         userProfileImageView.snp.makeConstraints {
             $0.width.height.equalTo(20)
@@ -114,11 +124,33 @@ final class MainPageCell: baseCollectionViewCell<MainPageModel>{
         }
     }
     override func configureCell() {
-        
+        self.layer.borderColor = UIColor.black.cgColor
+        self.layer.borderWidth = 1
     }
     
     override func bind(_ model: MainPageModel) {
+        postImageView.kf.setImage(with: URL(string: model.postImageUrl)!,
+                                  placeholder: nil,
+                                  options: [])
+        userProfileImageView.kf.setImage(with: URL(string: model.userProfileImageUrl)!,
+                                         placeholder: nil,
+                                         options: [])
+        userNameLabel.text = model.userName
         
+        let tags = model.tag.reduce(into: "") { partialResult, str in
+             partialResult += "#\(str) "
+        }
+        tagLabel.text = tags
+        
+        hanggerdLabel.text = "옷걸이 \(model.hanggerdCount)개"
+        
+        commentCountLabel.text = "평가 \(model.commentCount)개"
+        
+        Observable.just(model.comments)
+            .bind(to: commentTableView.rx.items(cellIdentifier: CommentCell.reusableID, cellType: CommentCell.self)) { _, element, cell in
+                cell.model = element
+            }
+            .disposed(by: disposeBag)
     }
     
 }

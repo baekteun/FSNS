@@ -19,11 +19,14 @@ final class MainReactor: Reactor, Stepper{
     
     // MARK: - Reactor
     enum Action{
-        
+        case loadPost
     }
     enum Mutation{
+        case setPost([MainPageModel])
     }
     struct State{
+        var post: [MainPageModel]?
+        
     }
     
     var initialState: State = State()
@@ -34,7 +37,8 @@ final class MainReactor: Reactor, Stepper{
 extension MainReactor{
     func mutate(action: Action) -> Observable<Mutation> {
         switch action{
-            
+        case .loadPost:
+            return loadPost()
         default:
             return .empty()
         }
@@ -46,7 +50,8 @@ extension MainReactor{
     func reduce(state: State, mutation: Mutation) -> State {
         var newState = state
         switch mutation {
-            
+        case let .setPost(model):
+            newState.post = model
         }
         return newState
     }
@@ -55,5 +60,17 @@ extension MainReactor{
 
 // MARK: - Method
 private extension MainReactor{
-    
+    func loadPost() -> Observable<Mutation>{
+        let model = [
+            MainPageModel(userProfileImageUrl: "https://static.solved.ac/uploads/profile/360x360/baekteun-picture-1633655185573.png",
+                                  userName: "baek", tag: ["멘투멘"], postImageUrl: "https://static.solved.ac/uploads/profile/360x360/baekteun-picture-1633655185573.png", hanggerdCount: 20, commentCount: 2, comments: [
+                                      Comment(userName: "baek", profileImageUrl: "https://static.solved.ac/uploads/profile/360x360/baekteun-picture-1633655185573.png", starCount: 2, content: "이런")
+                                  ]),
+            MainPageModel(userProfileImageUrl: "https://static.solved.ac/uploads/profile/360x360/baekteun-picture-1633655185573.png",
+                                  userName: "baek", tag: ["멘투멘"], postImageUrl: "https://static.solved.ac/uploads/profile/360x360/baekteun-picture-1633655185573.png", hanggerdCount: 20, commentCount: 2, comments: [
+                                      Comment(userName: "baek", profileImageUrl: "https://static.solved.ac/uploads/profile/360x360/baekteun-picture-1633655185573.png", starCount: 2, content: "이런")
+                                  ])
+            ]
+        return .just(.setPost(model))
+    }
 }

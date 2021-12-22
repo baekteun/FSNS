@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import RxSwift
 
 class baseTableViewCell<T>: UITableViewCell{
     let bound = UIScreen.main.bounds
-    
+    lazy var disposeBag: DisposeBag = .init()
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         addView()

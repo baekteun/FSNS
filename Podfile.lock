@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.4.4)
+  - AnimatedCollectionViewLayout (1.1.0)
   - Cosmos (23.0.0)
   - Kingfisher (7.1.2)
   - Moya/Core (15.0.0):
@@ -34,6 +35,7 @@ PODS:
   - WeakMapTable (1.2.0)
 
 DEPENDENCIES:
+  - AnimatedCollectionViewLayout
   - Cosmos (~> 23.0)
   - Kingfisher (~> 7.1.2)
   - Moya/RxSwift (~> 15.0.0)
@@ -52,6 +54,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - AnimatedCollectionViewLayout
     - Cosmos
     - Kingfisher
     - Moya
@@ -71,6 +74,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
+  AnimatedCollectionViewLayout: 0c1a38c4be115c525c887be183fc91ef65737c5d
   Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
   Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
@@ -88,6 +92,6 @@ SPEC CHECKSUMS:
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
   WeakMapTable: 05c694ce8439a7a9ebabb56187287a63c57673d6
 
-PODFILE CHECKSUM: 3efb2848a5ddc9648da26b1726b974de62cc94ee
+PODFILE CHECKSUM: 440b48230ccb425330d559e8f81ab21612a0efd6
 
 COCOAPODS: 1.11.2

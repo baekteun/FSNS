@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import RxSwift
 
 class baseCollectionViewCell<T>: UICollectionViewCell{
     let bound = UIScreen.main.bounds
+    lazy var disposeBag: DisposeBag = .init()
     override init(frame: CGRect) {
         super.init(frame: frame)
         addView()

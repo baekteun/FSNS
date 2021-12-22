@@ -24,6 +24,7 @@ target 'Fashion' do
   pod 'Swinject', '~> 2.7'
   pod 'SwinjectAutoregistration', '~> 2.7'
   pod 'Cosmos', '~> 23.0'
+  pod 'AnimatedCollectionViewLayout'
 
   # Network
   pod 'Moya/RxSwift', '~> 15.0.0'

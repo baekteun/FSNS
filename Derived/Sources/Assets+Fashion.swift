@@ -21,6 +21,7 @@ public enum FashionAsset {
   public static let fashionDummyOne = FashionImages(name: "FASHION_DUMMY_ONE")
   public static let fashionDummyTwo = FashionImages(name: "FASHION_DUMMY_TWO")
   public static let fashionDefaultProfile = FashionImages(name: "FASHION_DefaultProfile")
+  public static let fashionHanger = FashionImages(name: "FASHION_Hanger")
   public static let fashionMaincolor = FashionColors(name: "FASHION_MAINCOLOR")
   public static let fashionSplash = FashionImages(name: "FASHION_SPLASH")
 }
