@@ -11,6 +11,7 @@ import Then
 import SnapKit
 import RxCocoa
 import RxSwift
+import DynamicColor
 
 final class LoginVC: baseVC<LoginReactor>{
     // MARK: - Properties
@@ -25,7 +26,8 @@ final class LoginVC: baseVC<LoginReactor>{
     private let subLogoLabel = UILabel().then {
         $0.text = "당신의 패션 도우미"
         $0.font = UIFont(font: FashionFontFamily.Cafe24Ssurround.bold, size: 12)
-        
+        $0.textColor = UIColor(hexString: "#ADADAD")
+        $0.textAlignment = .center
     }
     
     private let idTextField = LoginTextField(icon: UIImage(systemName: "person.fill")?.withTintColor(.black, renderingMode: .alwaysOriginal) ?? .init(), placeholder: "ID")
@@ -56,12 +58,18 @@ final class LoginVC: baseVC<LoginReactor>{
     // MARK: - UI
     override func addView() {
         buttonStack.addArrangeSubviews([loginButton, toRegisterButton])
-        [logoLabel, stack, findIdOrPasswordButton, buttonStack].forEach{ view.addSubview($0) }
+        [
+            logoLabel, stack, findIdOrPasswordButton, buttonStack, subLogoLabel
+        ].forEach{ view.addSubview($0) }
     }
     override func setLayout() {
         logoLabel.snp.makeConstraints {
             $0.top.equalToSuperview().offset(bound.height*0.1796)
             $0.centerX.equalToSuperview()
+        }
+        subLogoLabel.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.top.equalTo(logoLabel.snp.bottom)
         }
         idTextField.snp.makeConstraints {
             $0.height.equalTo(35)
