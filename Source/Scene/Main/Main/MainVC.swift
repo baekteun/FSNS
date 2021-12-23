@@ -33,6 +33,8 @@ final class MainVC: baseVC<MainReactor>{
         return collection
     }()
     
+    private var currentPage: Int = 0
+    
     // MARK: - UI
     override func addView() {
         [
@@ -61,7 +63,12 @@ final class MainVC: baseVC<MainReactor>{
     
     // MARK: - Reactor
     override func bindView(reactor: MainReactor) {
-        
+        mainPageCollectionView.rx.didEndDisplayingCell
+            .map { $0.at.row }
+            .subscribe(onNext: { [weak self] in
+                self?.currentPage = $0
+            })
+            .disposed(by: disposeBag)
     }
     override func bindAction(reactor: MainReactor) {
         self.rx.viewDidAppear
@@ -79,6 +86,7 @@ final class MainVC: baseVC<MainReactor>{
                 cellType: MainPageCell.self
             )) { _, element ,cell in
                 cell.model = element
+                cell.delegate = self
             }
             .disposed(by: disposeBag)
         
@@ -86,4 +94,42 @@ final class MainVC: baseVC<MainReactor>{
     }
 }
 
-
+// MARK: - Delegate
+extension MainVC: MainPageCellDelegate{
+    func userProfileButtonDidTap() {
+        Observable.just(currentPage)
+            .map(Reactor.Action.otherProfileButtonDidTap)
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+    }
+    
+    func hangerButtonDidTap() {
+        Observable.just(currentPage)
+            .map(Reactor.Action.hangerButtonDidTap)
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+    }
+    
+    func starButtonDidTap() {
+        Observable.just(currentPage)
+            .map(Reactor.Action.starButtonDidTap)
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+    }
+    
+    func commentButtonDidTap() {
+        Observable.just(currentPage)
+            .map(Reactor.Action.commentButtonDidTap)
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+    }
+    
+    func bookmarkButtonDidTap() {
+        Observable.just(currentPage)
+            .map(Reactor.Action.bookmarkButtonDidTap)
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+    }
+    
+    
+}

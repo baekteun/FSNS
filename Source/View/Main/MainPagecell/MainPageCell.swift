@@ -18,7 +18,7 @@ import MapKit
 protocol MainPageCellDelegate: class{
     func userProfileButtonDidTap()
     func hangerButtonDidTap()
-    func startButtonDidTap()
+    func starButtonDidTap()
     func commentButtonDidTap()
     func bookmarkButtonDidTap()
 }
@@ -180,7 +180,7 @@ final class MainPageCell: baseCollectionViewCell<MainPageModel>{
         
         starButton.rx.tap
             .subscribe(onNext: { [weak self] in
-                self?.delegate?.startButtonDidTap()
+                self?.delegate?.starButtonDidTap()
             })
             .disposed(by: disposeBag)
         
