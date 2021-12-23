@@ -62,17 +62,18 @@ private extension MainReactor{
     func loadPost() -> Observable<Mutation>{
         let model = [
             MainPageModel(userProfileImageUrl: "https://static.solved.ac/uploads/profile/360x360/baekteun-picture-1633655185573.png",
-                                  userName: "baek", tag: ["멘투멘"], postImageUrl: "https://static.solved.ac/uploads/profile/360x360/baekteun-picture-1633655185573.png", hanggerdCount: 20, commentCount: 2, comments: [
+                                  userName: "baek", tag: ["멘투멘"], postImageUrl: "https://static.solved.ac/uploads/profile/360x360/baekteun-picture-1633655185573.png", hanggerdCount: 20, commentCount: 2,description: "fdzz", comments: [
                                     Comment(userName: "baek", profileImageUrl: "https://static.solved.ac/uploads/profile/360x360/baekteun-picture-1633655185573.png", starCount: Int(arc4random_uniform(5)), content: "이런"),
                                     Comment(userName: "baek", profileImageUrl: "https://static.solved.ac/uploads/profile/360x360/baekteun-picture-1633655185573.png", starCount: Int(arc4random_uniform(5)), content: "이런")
                                   ]),
             MainPageModel(userProfileImageUrl: "https://static.solved.ac/uploads/profile/360x360/baekteun-picture-1633655185573.png",
-                                  userName: "baek", tag: ["멘투멘"], postImageUrl: "https://static.solved.ac/uploads/profile/360x360/baekteun-picture-1633655185573.png", hanggerdCount: 20, commentCount: 2, comments: [
+                                  userName: "baek", tag: ["멘투멘"], postImageUrl: "https://static.solved.ac/uploads/profile/360x360/baekteun-picture-1633655185573.png", hanggerdCount: 20, commentCount: 2,description: "fdzz", comments: [
                                     Comment(userName: "baek", profileImageUrl: "https://static.solved.ac/uploads/profile/360x360/baekteun-picture-1633655185573.png", starCount: Int(arc4random_uniform(5)), content: "이런"),
                                     Comment(userName: "baek", profileImageUrl: "https://static.solved.ac/uploads/profile/360x360/baekteun-picture-1633655185573.png", starCount: Int(arc4random_uniform(5)), content: "이런")
                                   ]),
             MainPageModel(userProfileImageUrl: "https://static.solved.ac/uploads/profile/360x360/baekteun-picture-1633655185573.png",
-                                  userName: "baek", tag: ["멘투멘"], postImageUrl: "https://static.solved.ac/uploads/profile/360x360/baekteun-picture-1633655185573.png", hanggerdCount: 20, commentCount: 2, comments: [
+                                  userName: "baek", tag: ["멘투멘"], postImageUrl: "https://static.solved.ac/uploads/profile/360x360/baekteun-picture-1633655185573.png", hanggerdCount: 20, commentCount: 2,description: "fdzz",
+                          comments: [
                                     Comment(userName: "baek", profileImageUrl: "https://static.solved.ac/uploads/profile/360x360/baekteun-picture-1633655185573.png", starCount: Int(arc4random_uniform(5)), content: "이런"),
                                     Comment(userName: "baek", profileImageUrl: "https://static.solved.ac/uploads/profile/360x360/baekteun-picture-1633655185573.png", starCount: Int(arc4random_uniform(5)), content: "이런")
                                   ])

@@ -16,6 +16,7 @@ struct MainPageModel{
     let postImageUrl: String
     let hanggerdCount: Int
     let commentCount: Int
+    let description: String
     let comments: [Comment]
 }
 

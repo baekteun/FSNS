@@ -21,9 +21,13 @@ final class MainPageCell: baseCollectionViewCell<MainPageModel>{
         $0.clipsToBounds = true
     }
     
-    private let userNameLabel = UILabel()
+    private let userNameLabel = UILabel().then {
+        $0.font = UIFont(font: FashionFontFamily.Cafe24Ssurround.bold, size: 10)
+    }
     
-    private let tagLabel = UILabel()
+    private let tagLabel = UILabel().then {
+        $0.font = UIFont(font: FashionFontFamily.Cafe24Ssurround.bold, size: 10)
+    }
     
     private let postImageView = UIImageView().then {
         $0.layer.cornerRadius = 20
@@ -60,9 +64,10 @@ final class MainPageCell: baseCollectionViewCell<MainPageModel>{
     
     private let hanggerdLabel = UILabel()
     
-    private let evaluationCountLabel = UILabel()
-    
-    private let descriptionLabel = UILabel()
+    private let descriptionLabel = UILabel().then {
+        $0.numberOfLines = 0
+        $0.font = UIFont(font: FashionFontFamily.Cafe24Ssurround.bold, size: 12)
+    }
     
     
     // MARK: - UI
@@ -70,7 +75,7 @@ final class MainPageCell: baseCollectionViewCell<MainPageModel>{
         iconStackView.addArrangeSubviews([hangerButton, starButton, commentButton])
         [
             userProfileImageView, userNameLabel, tagLabel, postImageView,
-            iconStackView, lineView, bookMarkButton, evaluationCountLabel, hanggerdLabel,
+            iconStackView, lineView, bookMarkButton, hanggerdLabel,
             descriptionLabel
         ].forEach{ addSubview($0) }
     }
@@ -97,8 +102,7 @@ final class MainPageCell: baseCollectionViewCell<MainPageModel>{
         hangerButton.snp.makeConstraints {
             $0.width.height.equalTo(starButton)
         }
-        bookMarkButton.snp.makeConstraints {
-            $0.trailing.equalTo(postImageView.snp.trailing)
+        bookMarkButton.snp.makeConstraints{            $0.trailing.equalTo(postImageView.snp.trailing)
             $0.top.equalTo(postImageView.snp.bottom).offset(5)
         }
         lineView.snp.makeConstraints {
@@ -143,8 +147,7 @@ final class MainPageCell: baseCollectionViewCell<MainPageModel>{
         
         hanggerdLabel.text = "옷걸이 \(model.hanggerdCount)개"
         
-        
-        
+        descriptionLabel.text = model.description
         
     }
     
