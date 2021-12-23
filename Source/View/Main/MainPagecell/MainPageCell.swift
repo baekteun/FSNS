@@ -35,16 +35,16 @@ final class MainPageCell: baseCollectionViewCell<MainPageModel>{
     }
     
     
-    private let hangerButton = UIButton().then {
+    let hangerButton = UIButton().then {
         $0.setImage(FashionAsset.fashionHanger.image, for: .normal)
         $0.contentMode = .scaleAspectFit
     }
     
-    private let starButton = UIButton().then {
+    let starButton = UIButton().then {
         $0.setImage(UIImage(systemName: "star")?.withTintColor(.black, renderingMode: .alwaysOriginal), for: .normal)
     }
     
-    private let commentButton = UIButton().then {
+    let commentButton = UIButton().then {
         $0.setImage(UIImage(systemName: "bubble.left")?.withTintColor(.black, renderingMode: .alwaysOriginal), for: .normal)
     }
     
@@ -58,7 +58,7 @@ final class MainPageCell: baseCollectionViewCell<MainPageModel>{
         $0.backgroundColor = .gray
     }
     
-    private let bookMarkButton = UIButton().then {
+    let bookMarkButton = UIButton().then {
         $0.setImage(UIImage(systemName: "bookmark")?.withTintColor(.black, renderingMode: .alwaysOriginal), for: .normal)
     }
     
