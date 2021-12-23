@@ -15,11 +15,17 @@ import RxSwift
 final class LoginVC: baseVC<LoginReactor>{
     // MARK: - Properties
     private let logoLabel = UILabel().then {
-        $0.text = "Welcome\nto Fashion SNS"
+        $0.text = "Fashion SNS"
         $0.font = UIFont(font: FashionFontFamily.Cafe24Ssurround.bold, size: 36)
         $0.textColor = .black
         $0.numberOfLines = 0
         $0.textAlignment = .center
+    }
+    
+    private let subLogoLabel = UILabel().then {
+        $0.text = "당신의 패션 도우미"
+        $0.font = UIFont(font: FashionFontFamily.Cafe24Ssurround.bold, size: 12)
+        
     }
     
     private let idTextField = LoginTextField(icon: UIImage(systemName: "person.fill")?.withTintColor(.black, renderingMode: .alwaysOriginal) ?? .init(), placeholder: "ID")

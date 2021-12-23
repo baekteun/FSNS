@@ -3,6 +3,7 @@ PODS:
   - AnimatedCollectionViewLayout (1.1.0)
   - Cosmos (23.0.0)
   - Differentiator (5.0.0)
+  - DynamicColor (5.0.1)
   - Kingfisher (7.1.2)
   - Moya/Core (15.0.0):
     - Alamofire (~> 5.0)
@@ -42,6 +43,7 @@ PODS:
 DEPENDENCIES:
   - AnimatedCollectionViewLayout
   - Cosmos (~> 23.0)
+  - DynamicColor (~> 5.0.0)
   - Kingfisher (~> 7.1.2)
   - Moya/RxSwift (~> 15.0.0)
   - PanModal (~> 1.2.7)
@@ -63,6 +65,7 @@ SPEC REPOS:
     - AnimatedCollectionViewLayout
     - Cosmos
     - Differentiator
+    - DynamicColor
     - Kingfisher
     - Moya
     - PanModal
@@ -85,6 +88,7 @@ SPEC CHECKSUMS:
   AnimatedCollectionViewLayout: 0c1a38c4be115c525c887be183fc91ef65737c5d
   Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
   Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
+  DynamicColor: d049834ef86d8ecf150b0ca1ebe54ee733a0ec22
   Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   PanModal: 3e16ead1a907fb06f4df3f13492fd00149fa4974
@@ -102,6 +106,6 @@ SPEC CHECKSUMS:
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
   WeakMapTable: 05c694ce8439a7a9ebabb56187287a63c57673d6
 
-PODFILE CHECKSUM: 2742e8d8db078a0385da0666c94e321e8abab7f4
+PODFILE CHECKSUM: 1d0091385874b4ea0663c88d0f0c8062a80136c0
 
 COCOAPODS: 1.11.2

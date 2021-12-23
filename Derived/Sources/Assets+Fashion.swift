@@ -18,6 +18,7 @@
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 public enum FashionAsset {
   public static let accentColor = FashionColors(name: "AccentColor")
+  public static let fashionCloset = FashionImages(name: "FASHION_Closet")
   public static let fashionDummyOne = FashionImages(name: "FASHION_DUMMY_ONE")
   public static let fashionDummyTwo = FashionImages(name: "FASHION_DUMMY_TWO")
   public static let fashionDefaultProfile = FashionImages(name: "FASHION_DefaultProfile")

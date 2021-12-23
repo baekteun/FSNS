@@ -25,6 +25,7 @@ extension Container{
         autoregister(ClosetVC.self, initializer: ClosetVC.init)
         autoregister(ProfileVC.self, initializer: ProfileVC.init)
         autoregister(SearchVC.self, initializer: SearchVC.init)
+        autoregister(FeedbackVC.self, initializer: FeedbackVC.init)
     }
     func registerReactor(){
         // VC's
@@ -35,6 +36,7 @@ extension Container{
         autoregister(ClosetReactor.self, initializer: ClosetReactor.init)
         autoregister(ProfileReactor.self, initializer: ProfileReactor.init)
         autoregister(SearchReactor.self, initializer: SearchReactor.init)
+        autoregister(FeedbackReactor.self, initializer: FeedbackReactor.init)
         
         // Cell's
         autoregister(MainPageCellReactor.self, initializer: MainPageCellReactor.init)
