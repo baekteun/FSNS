@@ -48,7 +48,13 @@ final class MainVC: baseVC<MainReactor>{
         super.configureVC()
         self.navigationController?.configureNavigationColor()
         self.navigationItem.configTitleView()
+            .map { Reactor.Action.navigationTitleDidTap }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
         self.navigationItem.configProfileButton()
+            .map { Reactor.Action.navigationProfileButtonDidTap }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
     }
     
     

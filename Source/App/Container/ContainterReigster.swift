@@ -39,7 +39,6 @@ extension Container{
         autoregister(FeedbackReactor.self, initializer: FeedbackReactor.init)
         
         // Cell's
-        autoregister(MainPageCellReactor.self, initializer: MainPageCellReactor.init)
     }
     
     func registerStepper(){

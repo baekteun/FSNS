@@ -13,11 +13,22 @@ import Kingfisher
 import RxSwift
 import ReactorKit
 import RxDataSources
+import MapKit
+
+protocol MainPageCellDelegate: class{
+    func userProfileButtonDidTap()
+    func hangerButtonDidTap()
+    func startButtonDidTap()
+    func commentButtonDidTap()
+    func bookmarkButtonDidTap()
+}
 
 final class MainPageCell: baseCollectionViewCell<MainPageModel>{
     // MARK: - Properties
-    private let userProfileImageView = UIImageView().then {
-        $0.layer.cornerRadius = 10
+    weak var delegate: MainPageCellDelegate?
+    
+    private let userProfileButton = UIButton().then {
+        $0.layer.cornerRadius = 15
         $0.clipsToBounds = true
     }
     
@@ -35,16 +46,16 @@ final class MainPageCell: baseCollectionViewCell<MainPageModel>{
     }
     
     
-    let hangerButton = UIButton().then {
+    private let hangerButton = UIButton().then {
         $0.setImage(FashionAsset.fashionHanger.image, for: .normal)
         $0.contentMode = .scaleAspectFit
     }
     
-    let starButton = UIButton().then {
+    private let starButton = UIButton().then {
         $0.setImage(UIImage(systemName: "star")?.withTintColor(.black, renderingMode: .alwaysOriginal), for: .normal)
     }
     
-    let commentButton = UIButton().then {
+    private let commentButton = UIButton().then {
         $0.setImage(UIImage(systemName: "bubble.left")?.withTintColor(.black, renderingMode: .alwaysOriginal), for: .normal)
     }
     
@@ -58,7 +69,7 @@ final class MainPageCell: baseCollectionViewCell<MainPageModel>{
         $0.backgroundColor = .gray
     }
     
-    let bookMarkButton = UIButton().then {
+    private let bookMarkButton = UIButton().then {
         $0.setImage(UIImage(systemName: "bookmark")?.withTintColor(.black, renderingMode: .alwaysOriginal), for: .normal)
     }
     
@@ -74,7 +85,7 @@ final class MainPageCell: baseCollectionViewCell<MainPageModel>{
     override func addView() {
         iconStackView.addArrangeSubviews([hangerButton, starButton, commentButton])
         [
-            userProfileImageView, userNameLabel, tagLabel, postImageView,
+            userProfileButton, userNameLabel, tagLabel, postImageView,
             iconStackView, lineView, bookMarkButton, hanggerdLabel,
             descriptionLabel
         ].forEach{ addSubview($0) }
@@ -86,14 +97,14 @@ final class MainPageCell: baseCollectionViewCell<MainPageModel>{
             $0.width.equalTo(bound.width*0.8222)
             $0.height.equalTo(bound.height*0.46875)
         }
-        userProfileImageView.snp.makeConstraints {
-            $0.width.height.equalTo(20)
+        userProfileButton.snp.makeConstraints {
+            $0.width.height.equalTo(30)
             $0.leading.equalTo(postImageView.snp.leading)
             $0.bottom.equalTo(postImageView.snp.top)
         }
         userNameLabel.snp.makeConstraints {
-            $0.centerY.equalTo(userProfileImageView)
-            $0.leading.equalTo(userProfileImageView.snp.trailing).offset(10)
+            $0.centerY.equalTo(userProfileButton)
+            $0.leading.equalTo(userProfileButton.snp.trailing).offset(10)
         }
         iconStackView.snp.makeConstraints {
             $0.leading.equalTo(postImageView.snp.leading)
@@ -127,6 +138,7 @@ final class MainPageCell: baseCollectionViewCell<MainPageModel>{
     
     override func configureCell() {
         self.backgroundColor = .white
+        bindView()
     }
     
     override func bind(_ model: MainPageModel) {
@@ -134,9 +146,11 @@ final class MainPageCell: baseCollectionViewCell<MainPageModel>{
                                   placeholder: nil,
                                   options: [])
         
-        userProfileImageView.kf.setImage(with: URL(string: model.userProfileImageUrl)!,
-                                         placeholder: nil,
-                                         options: [])
+        userProfileButton.kf.setImage(
+            with: URL(string: model.userProfileImageUrl)!,
+            for: .normal,
+            placeholder: nil,
+            options: [])
         
         userNameLabel.text = model.userName
         
@@ -151,5 +165,36 @@ final class MainPageCell: baseCollectionViewCell<MainPageModel>{
         
     }
     
+    private func bindView(){
+        userProfileButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.delegate?.userProfileButtonDidTap()
+            })
+            .disposed(by: disposeBag)
+        
+        hangerButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.delegate?.hangerButtonDidTap()
+            })
+            .disposed(by: disposeBag)
+        
+        starButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.delegate?.startButtonDidTap()
+            })
+            .disposed(by: disposeBag)
+        
+        commentButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.delegate?.commentButtonDidTap()
+            })
+            .disposed(by: disposeBag)
+        
+        bookMarkButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.delegate?.bookmarkButtonDidTap()
+            })
+            .disposed(by: disposeBag)
+    }
 }
 

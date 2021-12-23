@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -46,7 +46,6 @@
 		6DADE08DDAF1D1C87DCD8775 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F8764DA5EC7A5D56E47079C /* Roboto-Medium.ttf */; };
 		742B7A7B4BF33C65B0418F3F /* MainFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAEA667ED8EAE17876E3406 /* MainFlow.swift */; };
 		748008054BC6C850AEA6D653 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06716981517809E990E81D0B /* Roboto-LightItalic.ttf */; };
-		84BA89F3C4AD3716767534CF /* MainPageCellReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B34FBC8C477277701C672D7 /* MainPageCellReactor.swift */; };
 		88C141FF60D2B81C047474EE /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3539E748365C2490E9D1B6A5 /* Roboto-Thin.ttf */; };
 		890921CDEE7ED3065B43C025 /* baseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DFE66A8EB73C310F407A98 /* baseCollectionViewCell.swift */; };
 		937BB87351F76BA8A0922DD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A90EF1F7E4118947A52ACFF /* Assets.xcassets */; };
@@ -125,7 +124,6 @@
 		672E538F92B4CD3CD1DE19F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68B0558B7BAE6BBB51DDAD07 /* MainPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageCell.swift; sourceTree = "<group>"; };
 		69EA0BB42F5E68A9904B1B95 /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
-		6B34FBC8C477277701C672D7 /* MainPageCellReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageCellReactor.swift; sourceTree = "<group>"; };
 		6E0931351E9087337AE0C079 /* LoginReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReactor.swift; sourceTree = "<group>"; };
 		7125CAE831BD6B764B2685DD /* ArrayExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExt.swift; sourceTree = "<group>"; };
 		72451101284F06CC75C4486E /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
@@ -213,7 +211,6 @@
 			isa = PBXGroup;
 			children = (
 				68B0558B7BAE6BBB51DDAD07 /* MainPageCell.swift */,
-				6B34FBC8C477277701C672D7 /* MainPageCellReactor.swift */,
 			);
 			path = MainPagecell;
 			sourceTree = "<group>";
@@ -468,7 +465,6 @@
 				A1E0CB14F0F13F1D87DDDDA8 /* Pods-Fashion.debug.xcconfig */,
 				902EF09ADB781108317FED0A /* Pods-Fashion.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -709,8 +705,6 @@
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = baegteun;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = 50877A14401A1711D06CE06B /* Build configuration list for PBXProject "Fashion" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -858,7 +852,6 @@
 				4509A6A37742C69929204104 /* LoginTextField.swift in Sources */,
 				6A96E5F27AB03FBAF6C92F2F /* CommentCell.swift in Sources */,
 				B12237DBCF6104E865591617 /* MainPageCell.swift in Sources */,
-				84BA89F3C4AD3716767534CF /* MainPageCellReactor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

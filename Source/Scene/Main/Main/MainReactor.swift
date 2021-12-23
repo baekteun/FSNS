@@ -20,6 +20,13 @@ final class MainReactor: Reactor, Stepper{
     // MARK: - Reactor
     enum Action{
         case loadPost
+        case otherProfileButtonDidTap
+        case hangerButtonDidTap
+        case startButtonDidTap
+        case commentButtonDidTap
+        case bookmarkButtonDidTap
+        case navigationTitleDidTap
+        case navigationProfileButtonDidTap
     }
     enum Mutation{
         case setPost([MainPageModel])
